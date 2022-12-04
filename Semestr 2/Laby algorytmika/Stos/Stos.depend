@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1620754643 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\stos\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

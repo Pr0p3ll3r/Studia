@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1615923324 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\lab3\zad1\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+
+1615923324 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\quicksort\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+

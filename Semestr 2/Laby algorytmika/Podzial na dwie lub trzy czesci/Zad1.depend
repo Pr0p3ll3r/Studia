@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1616528761 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\lab4\zad1\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+
+1616528761 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\podzial na dwie lub trzy czesci\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+

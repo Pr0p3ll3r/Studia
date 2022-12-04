@@ -1,0 +1,115 @@
+1 kropka
+select OrderKey "Order ID",sum(TransactionPrice*Quantity)
+from OrderDetail
+group by OrderKey
+having sum(TransactionPrice*Quantity) = (
+    select max(sum(TransactionPrice*Quantity))
+    from OrderDetail
+    group by OrderKey
+
+2 kropka
+SELECT c.customerkey "Customer ID", concat(c.lastname, c.firstname) "Customer Name", oh.orderdate "Order Date" 
+from customer c
+Inner join orderheader oh on oh.customerkey=c.customerkey
+WHERE oh.orderdate=(SELECT max(orderdate) from orderheader)
+order by c.lastname
+
+3 kropka
+SELECT c.customerkey "Customer ID", concat(c.lastname, c.firstname) "Customer Name", count(oh.orderkey) "#Orders" 
+from customer c
+inner join orderheader oh on oh.customerkey=c.customerkey
+group by c.customerkey, c.lastname, c.firstname
+having count(oh.orderkey) = (SELECT max(count(*)) from orderheader
+                            group by customerkey)
+order by c.lastname
+
+4 kropka
+SELECT productname Product, count(od.productkey) "#Orders" from product p
+inner join orderdetail od on od.productkey=p.productkey
+inner join orderheader oh on oh.orderkey=od.orderkey
+where extract(year from oh.orderdate)=2019
+group by productname
+having count(od.productkey)=(SELECT max(count(*)) from orderdetail od
+                inner join orderheader oh on oh.orderkey=od.orderkey    
+                where extract(year from oh.orderdate)=2019
+                group by productkey)
+
+5 kropka
+SELECT productname Product, count(od.productkey) "#Customers" from product p
+inner join orderdetail od on od.productkey=p.productkey
+inner join orderheader oh on oh.orderkey=od.orderkey
+group by productname
+having count(od.productkey)=(SELECT max(distinct count(*)) from orderdetail od
+                inner join orderheader oh on oh.orderkey=od.orderkey    
+                group by productkey)
+
+6 kropka
+SELECT c.countryname Country, count(*) "#Orders" from orderdetail od
+inner join orderheader oh on oh.orderkey=od.orderkey
+inner join product p on p.productkey=od.productkey
+inner join productsubcategory psc on psc.productsubcategorykey=p.productsubcategorykey
+inner join productcategory pc on pc.productcategorykey=psc.productcategorykey
+inner join country c on c.countrykey=oh.countrykey
+where pc.productcategoryname='Bikes'
+group by c.countryname
+having count(*)=(SELECT max(count(*)) from orderdetail od
+                inner join orderheader oh on oh.orderkey=od.orderkey
+                inner join product p on p.productkey=od.productkey
+                inner join productsubcategory psc on psc.productsubcategorykey=p.productsubcategorykey
+                inner join productcategory pc on pc.productcategorykey=psc.productcategorykey
+                inner join country c on c.countrykey=oh.countrykey
+                where pc.productcategoryname='Bikes'
+                group by c.countryname)
+
+7 kropka
+SELECT oc.channelname Channel, count(*) "#Customers" from orderdetail od
+inner join orderheader oh on oh.orderkey=od.orderkey
+inner join product p on p.productkey=od.productkey
+inner join productsubcategory psc on psc.productsubcategorykey=p.productsubcategorykey
+inner join productcategory pc on pc.productcategorykey=psc.productcategorykey
+inner join orderchannel oc on oc.channelkey=oh.channelkey
+where pc.productcategoryname='Accessories'
+group by oc.channelname
+having count(*)=(SELECT max(count(*)) from orderdetail od
+                inner join orderheader oh on oh.orderkey=od.orderkey
+                inner join product p on p.productkey=od.productkey
+                inner join productsubcategory psc on psc.productsubcategorykey=p.productsubcategorykey
+                inner join productcategory pc on pc.productcategorykey=psc.productcategorykey
+                inner join orderchannel oc on oc.channelkey=oh.channelkey
+                where pc.productcategoryname='Accessories'
+                group by oc.channelname)
+
+8 kropka
+SELECT to_char(TO_DATE(extract(month from orderdate), 'MM'), 'Month') "Month", count(*)"#Customers" 
+from orderheader
+where extract(year from orderdate)=2019
+group by extract(month from orderdate)
+having count(*)=(SELECT max(count(*)) from orderheader
+                where extract(year from orderdate)=2019
+                group by extract(month from orderdate))
+
+9 kropka
+SELECT c.countryname Country, count(*) "#Canceled Orders" from orderheader oh
+                inner join orderstatus os on os.orderstatuskey=oh.orderstatuskey
+                inner join country c on c.countrykey=oh.countrykey
+                where os.orderstatusname='Canceled'
+                group by c.countryname
+having count(*)=(
+SELECT max(count(*)) from orderheader oh
+                inner join orderstatus os on os.orderstatuskey=oh.orderstatuskey
+                inner join country c on c.countrykey=oh.countrykey
+                where os.orderstatusname='Canceled'
+                group by c.countryname)
+
+10 kropka
+SELECT oh.orderkey "Order Number", sum(od.transactionprice*od.quantity) "Order Value"
+from orderheader oh
+inner join country c on c.countrykey=oh.countrykey
+inner join orderdetail od on od.orderkey=oh.orderkey
+where c.countryname='Australia'
+group by oh.orderkey
+having sum(od.transactionprice*od.quantity)>(SELECT avg(od.transactionprice*od.quantity)
+                                            from orderheader oh
+                                            inner join country c on c.countrykey=oh.countrykey
+                                            inner join orderdetail od on od.orderkey=oh.orderkey
+                                            where c.countryname='Australia')

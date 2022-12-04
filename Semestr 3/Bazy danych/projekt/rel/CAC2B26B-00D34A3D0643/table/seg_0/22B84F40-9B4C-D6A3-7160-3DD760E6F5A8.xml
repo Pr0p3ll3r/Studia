@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="22B84F40-9B4C-D6A3-7160-3DD760E6F5A8" name="review_cart">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 19:14:10 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C1CF5564-1DAE-FDA7-2674-6A815D7F4AE5">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 19:15:11 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="text" id="2FD0F22F-8F71-3B82-DC52-C3F572EF0668">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 19:15:11 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="client_id" id="146E3093-F57A-8172-899A-0FA68ACCBCCA">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:21:29 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BB6A8CE7-3AC4-C245-2A50-BEC67AE72EB2" referredColumn="6E70EB03-6AE8-DA93-531A-EE0CB01CEFFA"/>
+</associations>
+</Column>
+<Column name="cart_id" id="70F78128-429D-D082-5BBC-F3408182CAF2">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:21:54 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4F049CC0-B3A2-A18D-409F-3B98C9701835" referredColumn="3E50EA64-AFBE-3924-5038-B65DC71C462B"/>
+</associations>
+</Column>
+<Column name="date" id="C0FF5098-E95D-E15D-8CCC-6789C72F6B67">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 13:06:32 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8AD19CCF-EC77-338F-5833-ECC343902769" name="review_PK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 19:15:11 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1CF5564-1DAE-FDA7-2674-6A815D7F4AE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8654715C-2FD2-03C6-B37A-7169B7650CCC" name="review_client_FK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:21:29 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="146E3093-F57A-8172-899A-0FA68ACCBCCA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="484D9FBC-82E7-68E6-803F-C45060AEB15A" name="review_cart_FK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:21:54 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70F78128-429D-D082-5BBC-F3408182CAF2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

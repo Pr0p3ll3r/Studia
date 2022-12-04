@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0BC3D530-3567-11F2-5856-BC6812E19E34" name="price_history">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:40:01 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_25</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="1C7F025C-D590-8F3C-9E21-36B6015437F9">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:47:01 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date" id="8D12B83D-1145-6278-221E-16ACE164B9B4">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:41:31 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="0A1F5EC9-1A3A-C14D-1AFB-AC20A5603427">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:41:31 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="product_id" id="91BE7F5D-0CE4-2CA9-091B-51CECB3868EC">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:56:03 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BC66FA23-65F5-86A1-93A7-3571432FE17E" referredColumn="C0FE4067-EFA2-4083-6218-82C989CA9714"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4F2E0767-8BC2-A09E-1D71-FECD49C39C3B" name="price_history_PK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:42:09 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C7F025C-D590-8F3C-9E21-36B6015437F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78E39567-ED26-0D4D-125C-BB1B331506C6" name="price_history_product_FK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:56:03 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91BE7F5D-0CE4-2CA9-091B-51CECB3868EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

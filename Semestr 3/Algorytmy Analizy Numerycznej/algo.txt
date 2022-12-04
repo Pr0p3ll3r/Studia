@@ -1,0 +1,18 @@
+Na kartce:
+
+Jak policzyć drugą pochodną wielomianu za pomocą Hornera?
+Czy się różni druga pochodna od drugiej pochodnej unormowanej?
+Jak policzyć wielomian fundamentalny l1 dla x=1?
+Co się dzieje gdy x nie nalezy do dziedziny w interpolacji lub aproksymacji?
+Co się dzieje gdy w interpolacji x dla którego trzeba obliczyć wartość funkcji jest węzłem?
+Jak policzyć iloraz różnicy x0, x1, x2?
+Jakie podstawienie należy wykonać aby funkcje doprowadzić do funkcji liniowej za pomocą aproksymacji np. ax^2 + b, ax^3 + b, a*sqrt(x+b), a/sqrt(x+b)?
+
+Całki:
+Dostajemy a,b, liczbe węzłów lub liczbe podprzedziałów lub krok.
+
+Na komputerze:
+Napisz funkcje która zwróci wartość obliczoną za pomocą wzora trapeza.
+Napisz funkcje która zwróci tablice wspolczynnikow potrzebnych do obliczenia wielomianu interpolacyjnego newtona.
+Napisz funkcje która policzy współczynnik p 1,2 dla wielomiany newilla.
+Napisz funkcje która zwróci współczynnik kierunkowy prostej ax+b (aproksymacja).

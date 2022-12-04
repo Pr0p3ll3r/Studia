@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B3482E2-16AE-1AAE-0711-4784B0092945" name="review_product">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:36:49 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_24</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="48605AB4-23CB-607E-B523-EEF33AE83A61">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:37:11 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="text" id="9263E290-6B00-AB37-1467-1C840D80410C">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:37:11 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="product_id" id="562A172E-F69C-332E-CCCB-BBB7E82F352D">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:37:15 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="00F51724-4D22-612C-D829-2A21BE770CF3" referredColumn="C0FE4067-EFA2-4083-6218-82C989CA9714"/>
+</associations>
+</Column>
+<Column name="client_id" id="22202B44-C9A5-7A9C-66D5-A2EA461C1596">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:37:26 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="206E7CFF-F1E8-25A7-FB30-5A8DD4E98867" referredColumn="6E70EB03-6AE8-DA93-531A-EE0CB01CEFFA"/>
+</associations>
+</Column>
+<Column name="date" id="757902A6-DAFE-74D5-C563-53EAEC881350">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 13:06:46 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="653E534C-D2F5-EB8A-ECBB-85F3B7794FC0" name="review_product_PK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:37:11 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48605AB4-23CB-607E-B523-EEF33AE83A61"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62D89FEE-F091-6DE6-4207-AC9E1216C133" name="review_product_product_FK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:37:15 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="562A172E-F69C-332E-CCCB-BBB7E82F352D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5BF7150F-5CD0-8B31-D923-076F2A5E43F4" name="review_product_client_FK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:37:26 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22202B44-C9A5-7A9C-66D5-A2EA461C1596"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

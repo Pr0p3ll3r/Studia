@@ -1,0 +1,9 @@
+czyJednorodny;nazwa;rodzaj
+0;paprotka;1
+1;pelargonia;2
+0;kaktus;3
+0;aloes;3
+0;opuncja;3
+1;bazylia;4
+1;poziomka;1
+1;truskawka;1

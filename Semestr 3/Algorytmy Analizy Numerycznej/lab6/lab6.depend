@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1637941524 source:e:\algorytmy analizy numerycznej\lab6\main.cpp
+	<iostream>
+	<stdlib.h>
+	<math.h>
+

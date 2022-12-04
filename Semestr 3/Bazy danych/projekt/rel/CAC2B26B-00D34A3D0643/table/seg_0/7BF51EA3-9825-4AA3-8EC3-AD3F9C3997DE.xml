@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7BF51EA3-9825-4AA3-8EC3-AD3F9C3997DE" name="category">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:32:12 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="900A672B-56FE-114A-7C37-221D53B61CA6">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:32:35 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="4E42FD9D-99AE-57FC-1925-6086FC238448">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:32:35 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1B39F55C-A649-D603-C8E0-193B4304BC46" name="category_PK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:32:35 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="900A672B-56FE-114A-7C37-221D53B61CA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FFAB266A-7EA0-2791-9991-9E02DABC5C2D" name="category_name_UN">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-28 13:59:45 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E42FD9D-99AE-57FC-1925-6086FC238448"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

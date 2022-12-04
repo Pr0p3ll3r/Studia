@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1603786865 source:c:\users\kuba\desktop\esd\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

@@ -1,0 +1,23 @@
+label {
+	font-size: 120%;
+}
+
+form {
+	padding: 10px 0 0 20px;
+}
+
+ul {
+	list-style-type:square
+}
+
+.czerwone {
+	color: red;
+}
+
+input[type=text] {
+	color: green;
+}
+
+input[type=email] {
+	color: green;
+}

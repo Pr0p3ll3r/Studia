@@ -1,0 +1,31 @@
+table {
+	background: #fde456;
+	text-align: center;
+	width: 94%;
+	margin: 2%;
+	border: #000040 solid 1pt;
+}
+
+caption {
+	font-size: 150%;
+	font-weight: bold;
+}
+
+thead, tfoot {
+	background: #0000a0;
+	color: #ffffff;
+	font-size: 110%;
+	padding: 5pt;
+}
+
+td, th {
+	border: #000040 solid 1pt;
+}
+
+tfoot a {
+	color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+	background: #ffffff;
+}

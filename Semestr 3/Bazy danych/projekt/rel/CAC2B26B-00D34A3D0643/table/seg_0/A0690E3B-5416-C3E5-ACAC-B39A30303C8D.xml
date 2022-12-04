@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A0690E3B-5416-C3E5-ACAC-B39A30303C8D" name="order">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:05:26 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_17</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="2D135713-9389-1E63-F370-70231502A040">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:06:10 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_time" id="446D8E96-1C32-9B58-0422-4CCC5431FAAE">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:06:10 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payment_id" id="517AA781-ECBE-FCBA-2287-ADB880C673BF">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:08:23 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32211594-C738-780A-3425-A4578BC5F59F" referredColumn="4CF5EDF8-1266-FD99-C21B-C1D0823BA008"/>
+</associations>
+</Column>
+<Column name="order_status_id" id="EF7DE440-ED90-6466-CE26-24852A4A7AFE">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:34:11 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6ECABB79-0B7C-72BC-0F17-DB5113B4922D" referredColumn="BD22B7CF-DF94-16B6-F532-0DE1E91153B7"/>
+</associations>
+</Column>
+<Column name="cart_id" id="637AAE48-5F46-7195-BA14-975B58294ED7">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-28 14:06:09 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BA3CD49D-735B-0D84-6BDD-7021B9CCEAF6" referredColumn="3E50EA64-AFBE-3924-5038-B65DC71C462B"/>
+</associations>
+</Column>
+<Column name="client_id" id="F9365C06-060E-4FFD-1826-2DCB7ECDD8EF">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-28 14:06:52 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7A1D5F06-1ABB-BAAC-C8EC-D9035ABC9E6C" referredColumn="6E70EB03-6AE8-DA93-531A-EE0CB01CEFFA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1E4F3947-1270-EC03-55E4-040533D78D55" name="order_PK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:06:10 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D135713-9389-1E63-F370-70231502A040"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7BB19E29-9182-DCC4-F962-89C4547D412D" name="order_payment_FK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:08:23 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="517AA781-ECBE-FCBA-2287-ADB880C673BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A47FE2E5-C102-1C5E-C9DD-62D16A3F9DC7" name="order_order_status_FK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:34:11 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF7DE440-ED90-6466-CE26-24852A4A7AFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DAE95282-5241-258E-185F-7D19F1038318" name="order_cart_FK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-28 14:06:09 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="637AAE48-5F46-7195-BA14-975B58294ED7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C2999CA4-E2A4-3945-63BA-838EF55FD15D" name="order_client_FK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-28 14:06:52 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9365C06-060E-4FFD-1826-2DCB7ECDD8EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

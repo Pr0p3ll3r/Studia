@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="96DD6837-53A1-3D35-6940-5AA7A29A89AD" name="payment">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:24:26 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="4CF5EDF8-1266-FD99-C21B-C1D0823BA008">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:25:38 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="paid_date" id="0CAC5226-9D3C-5951-712D-6C6A1BD39D08">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:25:38 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payment_method_id" id="51224550-8EC0-D5D8-F2DA-4C57DF27E621">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:26:41 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36D563C2-8E58-3B41-4323-A1E0FFB0D950" referredColumn="14423BBB-8B01-A5E4-DE89-6A9DAA4CAD75"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="502B5C9D-9068-8AA8-633C-28BB26CD06A6" name="payment_PK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:25:38 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CF5EDF8-1266-FD99-C21B-C1D0823BA008"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F1C63E8-2934-0551-C701-18E2DE95C848" name="payment_payment_method_FK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:26:41 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51224550-8EC0-D5D8-F2DA-4C57DF27E621"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

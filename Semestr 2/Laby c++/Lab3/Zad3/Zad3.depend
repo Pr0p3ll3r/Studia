@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1616456645 source:c:\users\kuba\desktop\studia\semestr 2\laby c++\lab3\zad3\main.cpp
+	<iostream>
+	<string>
+	<algorithm>
+

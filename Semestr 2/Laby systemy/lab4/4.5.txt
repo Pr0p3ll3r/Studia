@@ -1,0 +1,1 @@
+for i in *;do mv $i `echo $i | sed 's/jpeg/jpg/; s/JPEG/jpg/; s/JPG/jpg/'`; done

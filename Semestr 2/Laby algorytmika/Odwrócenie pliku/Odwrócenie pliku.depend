@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1620752702 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\odwrócenie pliku\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+

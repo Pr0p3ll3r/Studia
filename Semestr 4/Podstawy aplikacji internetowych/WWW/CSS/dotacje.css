@@ -1,0 +1,21 @@
+form {
+	text-align:center;
+}
+
+fieldset input{
+	margin:5px;
+}
+
+fieldset {
+	text-align:left;
+	display: inline-block;
+	width:25%;
+}
+
+h2, input[type=submit],	 input[type=reset]{
+	color: green;
+}
+
+input[type=submit] {
+	margin-right: 200px;
+}

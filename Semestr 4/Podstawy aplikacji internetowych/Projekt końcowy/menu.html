@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Pop Pizza</title>
+		<!-- Ikona -->
+        <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+		<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="CSS/style.css" rel="stylesheet" />
+		<!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme JS-->
+        <script src="JS/scripts.js"></script>
+		<script>
+			window.onscroll = function() {scrollFunction()};
+			window.onload = function() {cenaKoszyk()};
+		</script>
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper mb-3">Szybko i smacznie</span>
+                <span class="site-heading-lower text-primary fw-bold mb-3">Pop Pizza</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Pop Pizza</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Strona główna</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="menu.html">Menu</a></li>
+						<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="kreator.html">Kreator</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="kontakt.html">Kontakt</a></li>
+						<li class="nav-item px-lg-4">
+                        <a class="btn btn-outline-light disabled" href="koszyk.html">
+                            <b class="bi-cart-fill me-1 text-white marg"></b>                                   
+                            <span id="koszykCena" class="badge bg-dark text-white ms-1 rounded-pill">0 zł</span>
+                        </a>
+						</li>
+                    </ul>			
+                </div>
+            </div>
+        </nav>
+		<section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="">                
+                        <!-- Product image-->
+                        <img class="card-img-top" src="./images/question.png" alt="question" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center text-white">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Własna</h5>
+                                <!-- Product details-->
+                                wybierz składniki 
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-primary" href="kreator.html">Kreator</a></div>
+                        </div>        
+                    </div>
+                    <div class="col mb-5">                
+                        <!-- Product image-->
+                        <img class="card-img-top" src="./images/pizza/margarita.png" alt="Pizza Margarita" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center text-white">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Zwykła</h5>
+                                <!-- Product details-->
+                                sos, ser, przyprawy 
+                            </div>
+                        </div>
+						<select id="p1" class="form-select btn-primary text-center">
+							<option value="32-28" selected>32cm - 28zł</option>
+							<option value="42-32">42cm - 32zł</option>
+						</select><br>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button class="btn btn-primary" onclick="dodajMenu('Zwykła', ['sos', 'ser', 'przyprawy'], 'p1')">Dodaj do koszyka</button></div>
+                        </div> 
+					</div> 
+                    <div class="col mb-5">                
+                        <!-- Product image-->
+                        <img class="card-img-top" src="./images/pizza/hawajska.png" alt="Pizza Hawajska" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center text-white">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Hawajska</h5>
+                                <!-- Product details-->
+                                sos, ser, przyprawy, ananas, szynka
+                            </div>
+                        </div>
+						<select id="p2" class="form-select btn-primary text-center">
+							<option value="32-32" selected>32cm - 32zł</option>
+							<option value="42-36">42cm - 36zł</option>
+						</select><br>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button class="btn btn-primary" onclick="dodajMenu('Hawajska', ['sos', 'ser', 'przyprawy', 'ananas', 'szynka'], 'p2')">Dodaj do koszyka</button></div>
+                        </div> 
+					</div> 
+                    <div class="col mb-5">                
+                        <!-- Product image-->
+                        <img class="card-img-top" src="./images/pizza/szynka_grzyby.png" alt="Pizza z szynką i grzybami" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center text-white">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Z szynką i grzybami</h5>
+                                <!-- Product details-->
+                                sos, ser, przyprawy, szynka, grzyby
+                            </div>
+                        </div>
+						<select id="p3" class="form-select btn-primary text-center">
+							<option value="32-32" selected>32cm - 32zł</option>
+							<option value="42-36">42cm - 36zł</option>
+						</select><br>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button class="btn btn-primary" onclick="dodajMenu('Z szynką i grzybami', ['sos', 'ser', 'przyprawy', 'szynka', 'grzyby'], 'p3')">Dodaj do koszyka</button></div>
+                        </div>  
+					</div> 
+                    <div class="col mb-5">                
+                        <!-- Product image-->
+                        <img class="card-img-top" src="./images/pizza/salami.png" alt="Pizza Salami" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center text-white">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Z salami</h5>
+                                <!-- Product details-->
+                                sos, ser, przyprawy, salami
+                            </div>
+                        </div>
+						<select id="p4" class="form-select btn-primary text-center">
+							<option value="32-30" selected>32cm - 30zł</option>
+							<option value="42-34">42cm - 34zł</option>
+						</select><br>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button class="btn btn-primary" onclick="dodajMenu('Z salami', ['sos', 'ser', 'przyprawy', 'salami'], 'p4')">Dodaj do koszyka</button></div>
+                        </div>  
+					</div> 
+                    <div class="col mb-5">                
+                        <!-- Product image-->
+                        <img class="card-img-top" src="./images/pizza/serowa.png" alt="Pizza serowa" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center text-white">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Serowa</h5>
+                                <!-- Product details-->
+                                sos, przyprawy, ser gouda, ser parmezan, ser mozzarella, ser blue castello  
+                            </div>
+                        </div>
+						<select id="p5" class="form-select btn-primary text-center">
+							<option value="32-34" selected>32cm - 34zł</option>
+							<option value="42-38">42cm - 38zł</option>
+						</select><br>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button class="btn btn-primary" onclick="dodajMenu('Serowa', ['sos', 'przyprawy', 'ser gouda', 'ser parmezan', 'ser mozzarella', 'ser blue castello'], 'p5')">Dodaj do koszyka</button></div>
+                        </div>  
+					</div> 
+                    <div class="col mb-5">                
+                        <!-- Product image-->
+                        <img class="card-img-top" src="./images/pizza/wege.png" alt="Pizza Wegetariańska" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center text-white">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Wegetariańska</h5>
+                                <!-- Product details-->
+                                sos, ser, przyprawy, kukurydza, pieczarki, papryka, brokuły, pomidor
+                            </div>
+                        </div>
+						<select id="p6" class="form-select btn-primary text-center">
+							<option value="32-38" selected>32cm - 38zł</option>
+							<option value="42-42">42cm - 42zł</option>
+						</select><br>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button class="btn btn-primary" onclick="dodajMenu('Wegetariańska', ['sos', 'przyprawy', 'kukurydza', 'pieczarki', 'papryka', 'brokuły', 'pomidor'], 'p6')">Dodaj do koszyka</button></div>
+                        </div>  
+					</div> 
+                    <div class="col mb-5">                
+                        <!-- Product image-->
+                        <img class="card-img-top" src="./images/pizza/miesna.png" alt="Pizza Mięsna" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center text-white">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Mięsna</h5>
+                                <!-- Product details-->
+                                sos, ser, przyprawy, kiełbasa, salami, bekon, szynka
+                            </div>
+                        </div>
+						<select id="p7" class="form-select btn-primary text-center">
+							<option value="32-36" selected>32cm - 36zł</option>
+							<option value="42-40">42cm - 40zł</option>
+						</select><br>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button class="btn btn-primary" onclick="dodajMenu('Mięsna', ['sos', 'przyprawy', 'kiełbasa', 'salami', 'bekon', 'szynka'], 'p7')">Dodaj do koszyka</button></div>
+                        </div>   
+					</div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Copyright &copy; JD 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

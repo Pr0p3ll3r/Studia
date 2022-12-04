@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1618940929 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\lab7\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+
+1618941000 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\wyszukiwanie informacji w zbiorze\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+

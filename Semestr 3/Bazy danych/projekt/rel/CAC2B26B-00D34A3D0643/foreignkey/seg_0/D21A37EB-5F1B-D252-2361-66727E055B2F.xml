@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D21A37EB-5F1B-D252-2361-66727E055B2F" containerWithKeyObject="D83ED2DE-664C-E3D2-0734-2344DF0C72F0" localFKIndex="5A185491-D0C1-0FDD-25B1-2F34F02FA517" name="message_client_FK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:04:22 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<referredTableLongName>client</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>1D04E362-88E3-731E-2637-9E8E6C200925</referredTableID>
+<keyObject>86DFBF06-2F84-DA2E-4702-DB749771FF75</keyObject>
+<referredKeyID>86DFBF06-2F84-DA2E-4702-DB749771FF75</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

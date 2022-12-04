@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1623775415 source:c:\users\kuba\downloads\kolokwium 2\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1623777353 source:c:\users\kuba\desktop\kolokwium 2\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1648766982 source:c:\users\kuba\desktop\generator peseli\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
+1649800915 source:c:\users\kuba\desktop\studia\semestr 4\bezpieczeñstwo informacji\generator peseli\pesele.cpp
+	<iostream>
+	<fstream>
+	<string>
+

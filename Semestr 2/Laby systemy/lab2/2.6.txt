@@ -1,0 +1,1 @@
+m=$(df --output=avail /dev/sda3 | tail -1)

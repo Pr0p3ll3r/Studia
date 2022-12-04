@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1640317671 source:c:\users\kuba\desktop\gauss\main.cpp
+	<iostream>
+	<fstream>
+	<cmath>
+
+1641132753 source:c:\users\kuba\desktop\studia\semestr 3\algorytmy analizy numerycznej\gauss\main.cpp
+	<iostream>
+	<fstream>
+	<cmath>
+

@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1D04E362-88E3-731E-2637-9E8E6C200925" name="client">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 14:41:44 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6E70EB03-6AE8-DA93-531A-EE0CB01CEFFA">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 14:45:41 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="login" id="F3334F7F-62C9-B3B2-F2A4-CB14231884D6">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 14:45:41 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hashed_password" id="1C4A06EF-EB56-48C8-46A3-11848FF0FEF8">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 14:45:41 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="4E9B20CE-16D2-FFDC-2625-45C33DEFC004">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 14:45:41 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="83C0A34E-0DAE-F6C4-90F9-C37CD373DDAE">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:03:00 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="86DFBF06-2F84-DA2E-4702-DB749771FF75" name="client_PK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 14:45:41 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6E70EB03-6AE8-DA93-531A-EE0CB01CEFFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="781594F7-EDE0-072D-2CB3-6EBD3EE592BA" name="client_login_UN">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 14:46:01 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3334F7F-62C9-B3B2-F2A4-CB14231884D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F7AC6F1C-C147-6AB3-EB2D-1AB2A4E2BD55" name="client_email_UN">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:02:28 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E9B20CE-16D2-FFDC-2625-45C33DEFC004"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

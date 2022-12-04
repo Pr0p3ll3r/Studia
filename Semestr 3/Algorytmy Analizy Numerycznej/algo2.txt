@@ -1,0 +1,8 @@
+Przykładowe zadania do napisania funkcji:
+- funkcja, która jako argument przyjmie tablicę A i zwróci wskaźnik na macierz L, obliczoną za pomocą metody Choleskiego;
+- funkcja, która jako argument przyjmie tablicę L oraz wektor wyrazów wolnych b, i obliczy wektor y za pomocą metody Choleskiego Ly=b
+- funkcja, która dostanie tablicę A oraz wektor wyrazów wolnych i za pomocą postępowania odwrotnego zwróci wskaźnik na wektor wyrazów wolnych, Ax=b
+- funkcja, która jako argumenty dostanie początek i koniec przedziału oraz epsilon i zwróci miejsce zerowe podanej funkcji  znalezione za pomocą metody bisekcji. 
+- funkcja, która jako argument dostanie początek ( punkt startowy) oraz epsilon i zwróci miejsce zerowe podanej funkcji  znalezione za pomocą metody Netwona-Rapsona
+- funkcja, która jako argument dostanie początek i koniec przedziału oraz epsilon i zwróci ile iteracji należy wykonać aby znaleźć miejsce zerowe podanej funkcji ( liczmy od 1)
+- funkcja, która jako argument dostanie początek (punkt startowy) i epsilon. Funkcja powinna zwrócić ile iteracji należy wykonać aby znaleźć miejsce zerowe podanej funkcji ( liczmy od 1). 

@@ -1,0 +1,11 @@
+find / -printf '%f\n' | sort | uniq >> all_files
+cat all_files | grep '\.h$' >> all_h
+
+find /usr -type f  -printf '%f\n'-size -2000 | grep '\.c$' | wc -l
+435
+
+grep '#define' `find /usr/include -type f | grep '\.h$'` | wc -l
+57135
+
+ls -lS /etc
+

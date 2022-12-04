@@ -1,0 +1,57 @@
+p:nth-child(3n+1) {
+	letter-spacing: 10pt;
+}
+
+p:nth-child(even) {
+	background: yellow;
+}
+
+p>em:last-of-type {
+	color: blue;
+}
+
+div>*:nth-child(5) {
+	border: dotted blue;
+	border-right: none;
+}
+
+p:nth-child(odd) {
+	text-decoration: italic;
+}
+
+em:nth-of-type(2) {
+	text-decoration: underline;
+}
+
+img[src="obrazek.jpg"] {
+	border-left: 3px solid green;
+	border-right: 3px solid green;
+}
+
+#trzeci strong {
+	font-size: 20pt;
+}
+
+a[title] {
+	letter-spacing: 6px;
+}
+
+h1,h2,h3 {
+	margin-left: 50px;
+}
+
+li:nth-of-type(even) {
+	background: #cc0000;
+}
+
+p[class$="y"] {
+	margin-top: 15px;
+}
+
+a[title*="em"] {
+	border-top: 4px solid orange;
+}
+
+ul + p {
+	color: orange;
+}

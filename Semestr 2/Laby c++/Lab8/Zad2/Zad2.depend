@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1620745734 source:c:\users\kuba\desktop\studia\semestr 2\laby c++\lab8\zad2\main.cpp
+	<iostream>
+	"Complex.h"
+
+1620745752 source:c:\users\kuba\desktop\studia\semestr 2\laby c++\lab8\zad2\complex.cpp
+	<iostream>
+	<cmath>
+	"Complex.h"
+
+1620745664 c:\users\kuba\desktop\studia\semestr 2\laby c++\lab8\zad2\complex.h
+	<iostream>
+

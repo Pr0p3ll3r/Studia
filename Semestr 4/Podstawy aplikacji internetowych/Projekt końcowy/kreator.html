@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Pop Pizza</title>
+		<!-- Ikona -->
+        <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+		<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="CSS/style.css" rel="stylesheet" />
+		<!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme JS-->
+        <script src="JS/scripts.js"></script>
+		<script>
+			window.onscroll = function() {scrollFunction()};
+			window.onload = function() {cenaKoszyk(); 
+				aktualizujCene();
+				var formPizza = document.getElementById("formPizza");
+				formPizza.onchange = function() {aktualizujCene()};
+			};
+			
+		</script>
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper mb-3">Szybko i smacznie</span>
+                <span class="site-heading-lower text-primary fw-bold mb-3">Pop Pizza</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Pop Pizza</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Strona główna</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="menu.html">Menu</a></li>
+						<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="kreator.html">Kreator</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="kontakt.html">Kontakt</a></li>
+						<li class="nav-item px-lg-4">
+                        <a class="btn btn-outline-light disabled" href="koszyk.html">
+                            <b class="bi-cart-fill me-1 text-white marg"></b>                                   
+                            <span id="koszykCena" class="badge bg-dark text-white ms-1 rounded-pill">0 zł</span>
+                        </a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-5">
+                                <span class="section-heading-lower fw-bold">Stwórz własną pizzę!</span>
+                            </h2>
+							<form id="formPizza" method="post" onsubmit="return dodajKreator(), false">
+								<h4>Ilość</h4>
+									<input class="text-center" type="number" id="ilosc" min="1" value="1"/>
+								<br><br><h4>Rozmiar</h4>
+									<input class="form-check-input" type="radio" id="32" name="rozmiar" value="32" checked/>
+									<label for="32">32cm - 28zł</label><br> 
+									<input class="form-check-input" type="radio" id="42" name="rozmiar" value="42"/>
+									<label for="42">42cm - 32zł<br></label><br><br>
+								<h4>Składniki (+2zł) <br><span id="error_skladniki" class="error"></span></h4>
+								<div class="table-responsive">
+									<table class="table table-primary">
+										<tr>
+											<td>
+												<input class="form-check-input" type="checkbox" id="ananas" name="skladnik"/>
+												<label for="ananas">ananas</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="boczek" name="skladnik"/>
+												<label for="boczek">boczek</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="bekon" name="skladnik"/>
+												<label for="bekon">bekon</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="cebula" name="skladnik"/>
+												<label for="cebula">cebula</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="czosnek" name="skladnik"/>
+												<label for="czosnek">bekon</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="form-check-input" type="checkbox" id="kiełbasa" name="skladnik"/>
+												<label for="kiełbasa">kiełbasa</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="krewetki" name="skladnik"/>
+												<label for="krewetki">krewetki</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="kukurydza" name="skladnik"/>
+												<label for="kukurydza">kukurydza</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="kurczak" name="skladnik"/>
+												<label for="kurczak">kurczak</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="oliwki" name="skladnik"/>
+												<label for="oliwki">oliwki</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="form-check-input" type="checkbox" id="papryka_chilli" name="skladnik"/>
+												<label for="papryka_chilli">papryka chilli</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="papryka" name="skladnik"/>
+												<label for="papryka">papryka</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="pieczarki" name="skladnik"/>
+												<label for="pieczarki">pieczarki</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="pomidor" name="skladnik"/>
+												<label for="pomidor">pomidor</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="salami" name="skladnik"/>
+												<label for="salami">salami</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="form-check-input" type="checkbox" id="ser_feta" name="skladnik"/>
+												<label for="ser_feta">ser feta</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="ser_parmezan" name="skladnik"/>
+												<label for="ser_parmezan">ser parmezan</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="ser_plesniowy" name="skladnik"/>
+												<label for="ser_plesniowy">ser pleśniowy</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="szpinak" name="skladnik"/>
+												<label for="szpinak">szpinak</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="szynka" name="skladnik"/>
+												<label for="szynka">szynka</label>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<h3><span id="cena">Cena pizzy: 28zł</span></h3><br>									
+								<input class="btn btn-primary" type="button" value="Reset" onclick="resetForm()"/>
+								<input class="btn btn-primary" type="submit" value="Dodaj do koszyka"/> 
+							</form>                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Copyright &copy; JD 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

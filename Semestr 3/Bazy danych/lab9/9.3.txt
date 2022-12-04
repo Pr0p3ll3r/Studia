@@ -1,0 +1,37 @@
+1 kropka
+SELECT oh.orderkey "Order ID", oh.customerkey Customer, oh.countrykey Country 
+from orderheader oh
+inner join orderdetail od on od.orderkey=oh.orderkey
+group by oh.orderkey, oh.customerkey, oh.countrykey
+having sum(od.transactionprice*od.quantity)=(SELECT max(price) from(
+                                            select sum(transactionprice*quantity) price from orderdetail
+                                            group by orderkey))
+
+2 kropka
+SELECT c.customerkey, concat(concat(c.lastname, ' '), c.firstname), oh.orderdate
+from customer c
+inner join orderheader oh on oh.customerkey=c.customerkey
+where c.customerkey in (SELECT distinct customerkey
+                        from orderheader
+                        where to_char(orderdate, 'mm-yyyy')='12-2019')
+AND c.customerkey not in (SELECT distinct customerkey
+                        from orderheader
+                        where to_char(orderdate, 'mm-yyyy')='01-2020')
+
+3 kropka
+SELECT p.productname
+from product p
+where p.productkey in (SELECT distinct p.productkey from orderdetail od
+                        inner join product p on p.productkey=od.productkey
+                        inner join orderheader oh on oh.orderkey=od.orderkey
+                        inner join country c on c.countrykey=oh.countrykey
+                        inner join salesterritory st on st.salesterritorykey=c.salesterritorykey
+                        where st.salesterritoryname='North America')
+AND p.productkey in (SELECT distinct p.productkey from orderdetail od
+                        inner join product p on p.productkey=od.productkey
+                        inner join orderheader oh on oh.orderkey=od.orderkey
+                        inner join country c on c.countrykey=oh.countrykey
+                        inner join salesterritory st on st.salesterritorykey=c.salesterritorykey
+                        where st.salesterritoryname='Australia')
+
+4 kropka

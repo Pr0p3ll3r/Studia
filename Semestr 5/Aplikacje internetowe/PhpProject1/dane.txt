@@ -1,0 +1,3 @@
+Dudek 23 asd@asd.com Polska Java,C# visa 
+Kalinowska 16 kalinka@gmail.com Polska CPP,Java,C#,PHP,JavaScript eurocard 
+Nowak 50 asdd@asddd.com Polska CPP,Java,JavaScript przelew bankowy 

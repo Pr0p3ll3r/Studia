@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1623166960 source:c:\users\kuba\desktop\kolokwium ii\kolokwium ii\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	"Kwiat.h"
+
+1623166157 c:\users\kuba\desktop\kolokwium ii\kolokwium ii\kwiat.h
+	<iostream>
+
+1623166409 source:c:\users\kuba\desktop\kolokwium ii\kolokwium ii\kwiat.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	"Kwiat.h"
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1619546414 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\kolokwium i\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+

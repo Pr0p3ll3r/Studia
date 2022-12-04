@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1648687162 source:c:\users\kuba\desktop\generator hase³\main.cpp
+	<iostream>
+	<fstream>
+	<time.h>
+
+1649463176 source:c:\users\kuba\desktop\studia\semestr 4\bezpieczeñstwo informacji\generator hase³\has³a.cpp
+	<iostream>
+	<fstream>
+	<time.h>
+

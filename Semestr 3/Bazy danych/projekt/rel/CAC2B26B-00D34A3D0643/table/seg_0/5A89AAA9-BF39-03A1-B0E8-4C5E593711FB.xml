@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5A89AAA9-BF39-03A1-B0E8-4C5E593711FB" name="payment_method">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:25:43 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="14423BBB-8B01-A5E4-DE89-6A9DAA4CAD75">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:26:28 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="5E55B82E-12B4-3492-E718-FCB986685EC7">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:26:28 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6A752909-0DA7-ABA0-949E-4BD17F6A5B63" name="payment_method_PK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:26:28 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14423BBB-8B01-A5E4-DE89-6A9DAA4CAD75"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="26E44CFA-1603-98F9-C6F6-5C7CBAB06B7D" name="payment_method_name_UN">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 21:26:28 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E55B82E-12B4-3492-E718-FCB986685EC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

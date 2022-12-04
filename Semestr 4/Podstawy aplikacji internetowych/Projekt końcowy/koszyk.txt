@@ -1,0 +1,7 @@
+<h2 class="section-heading mb-5">
+	<span class="section-heading-lower fw-bold">Koszyk</span>
+</h2>
+	<div class="table-responsive">
+	<table id="koszyk" class="table table-primary">
+	</table>	
+	</div>

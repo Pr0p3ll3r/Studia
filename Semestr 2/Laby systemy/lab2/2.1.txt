@@ -1,0 +1,17 @@
+ls -lS /etc
+
+ls -l /etc > ~/katalog.txt | ls -lt /etc | tail -10
+
+find /usr -type f -name *mod* >> menu.txt
+
+ls /usr/sbin | grep '^[^x]' | grep fs
+
+cat /etc/passwd | head -30 | tail -3
+
+ls /home/student | sort 
+
+ls -l /home/student | sort -k3 
+
+
+
+

@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D83ED2DE-664C-E3D2-0734-2344DF0C72F0" name="message">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:03:46 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6B7D86D2-0C69-38E3-3E46-C1B9403032A2">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:04:05 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="text" id="2BFF863E-DD12-4CE9-49CF-7D806CDB94A4">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:27:20 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256</dataTypeSize>
+<ownDataTypeParameters>256,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="client_from" id="5C6CE70B-B955-792D-CA88-972000B656BB">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:04:22 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D21A37EB-5F1B-D252-2361-66727E055B2F" referredColumn="6E70EB03-6AE8-DA93-531A-EE0CB01CEFFA"/>
+</associations>
+</Column>
+<Column name="client_to" id="497BFDC6-A918-B6FE-1C3F-BA73A626EEFF">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:05:01 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="93E62B32-C098-6324-2C04-E224B33A484A" referredColumn="6E70EB03-6AE8-DA93-531A-EE0CB01CEFFA"/>
+</associations>
+</Column>
+<Column name="send_date" id="4177A546-BD7C-4C40-7ECA-966E796982A9">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:35:31 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="message_status_id" id="38177309-19CE-C5BB-3DF3-9222CD4B5F8E">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:12:49 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="871297FA-1B5E-24B1-9ED9-FAC481FAB581" referredColumn="2B538C57-E03A-2947-54C2-A728EA71D18B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CC096E58-1A22-6F19-02EE-0846F2BA4C3E" name="message_PK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:04:05 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B7D86D2-0C69-38E3-3E46-C1B9403032A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5A185491-D0C1-0FDD-25B1-2F34F02FA517" name="message_client_FK">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:04:22 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C6CE70B-B955-792D-CA88-972000B656BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DE3316D4-3F10-863A-8C35-C31564A44359" name="message_client_FKv2">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-21 15:05:01 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="497BFDC6-A918-B6FE-1C3F-BA73A626EEFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FDB45CB4-23DF-48A5-D2E5-A605255BC72D" name="message_message_status_FK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:12:49 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38177309-19CE-C5BB-3DF3-9222CD4B5F8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

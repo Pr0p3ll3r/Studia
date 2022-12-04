@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1621359437 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\kolejka\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<fstream>
+

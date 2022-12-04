@@ -1,0 +1,48 @@
+1 kropka
+SELECT extract(year from oh.orderdate), oh.customerkey, concat(concat(c.lastname, ' '),c.firstname),
+count(*) orderNumber
+from orderheader oh
+inner join orderstatus os on os.orderstatuskey=oh.orderstatuskey
+inner join customer c on c.customerkey=oh.customerkey
+where os.orderstatusname not in 'Canceled'
+group by extract(year from oh.orderdate), oh.customerkey, concat(concat(c.lastname, ' '),c.firstname)
+having count(*)=(SELECT max(order_num) 
+                    from (SELECT extract(year from oh.orderdate) Year, count(*) order_num
+                            from orderheader oh
+                            inner join orderstatus os on os.orderstatuskey=oh.orderstatuskey
+                            where os.orderstatusname not in 'Canceled'
+                            group by oh.customerkey, extract(year from oh.orderdate))
+                            where Year=extract(year from oh.orderdate))
+
+2 kropka
+Select extract(year from oh.orderdate) Year, p.productname Product, count(*) "#Items" from orderheader oh
+inner join orderdetail od on od.orderkey=oh.orderkey
+inner join country c on c.countrykey=oh.countrykey
+inner join product p on p.productkey=od.productkey
+where c.countryname='Australia'
+group by extract(year from oh.orderdate), p.productname
+having count(*)=(Select max(order_num) 
+                    from (select extract(year from orderdate) Year, count(p.productkey) order_num from orderheader oh
+                            inner join orderdetail od on od.orderkey=oh.orderkey
+                            inner join country c on c.countrykey=oh.countrykey
+                            inner join product p on p.productkey=od.productkey
+                            where c.countryname='Australia'
+                            group by p.productkey, extract(year from orderdate))
+                            where Year=extract(year from oh.orderdate))
+
+3 kropka
+select extract(year from orderdate) Year, pc.productcategoryname, p.productname Product, count(p.productkey) "#Customers" from orderheader oh
+inner join orderdetail od on od.orderkey=oh.orderkey
+inner join product p on p.productkey=od.productkey
+inner join productsubcategory psc on psc.productsubcategorykey=p.productsubcategorykey
+inner join productcategory pc on pc.productcategorykey=psc.productcategorykey
+group by pc.productcategoryname, p.productname, p.productkey, extract(year from orderdate)
+having count(p.productkey)=(select max(order_num) from(
+                                select pc.productcategoryname Category, extract(year from orderdate) Year, count(p.productkey) order_num from orderheader oh
+                                    inner join orderdetail od on od.orderkey=oh.orderkey
+                                    inner join product p on p.productkey=od.productkey
+                                    inner join productsubcategory psc on psc.productsubcategorykey=p.productsubcategorykey
+                                    inner join productcategory pc on pc.productcategorykey=psc.productcategorykey
+                                    group by pc.productcategoryname, p.productkey, extract(year from orderdate))
+                                    where Category=pc.productcategoryname and Year=extract(year from oh.orderdate))
+   

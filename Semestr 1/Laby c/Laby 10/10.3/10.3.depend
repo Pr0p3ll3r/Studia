@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1608579086 source:c:\users\kuba\desktop\laby c\laby 10\10.3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F1BDB55A-9F18-B24D-D3BA-A886AE3B5FD4" name="message_status">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:12:11 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_18</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="2B538C57-E03A-2947-54C2-A728EA71D18B">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:12:37 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status" id="A8A77AB9-9B0D-E142-5525-85014C57A3DD">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:12:37 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5244EA37-452B-9F2C-42AC-5DBCEB00E917" name="message_status_PK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:12:45 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B538C57-E03A-2947-54C2-A728EA71D18B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3F2E4DE-E25F-51AA-1CAA-3EFC3F8E6E91" name="message_status_status_UN">
+<createdBy>Kuba</createdBy>
+<createdTime>2021-10-28 13:58:56 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8A77AB9-9B0D-E142-5525-85014C57A3DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

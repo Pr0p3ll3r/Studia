@@ -1,0 +1,123 @@
+body {
+	background: #87cefa;
+	color: #000040;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, footer {
+	background: #000040;
+	color: #8080ff;
+	text-align: center;
+}
+
+#tresc {
+	display: flex;
+	box-sizing: content-box;
+}
+
+main {
+	background: #add8e6;
+	width: 75%;
+	padding: 1%;	
+}
+
+#kontener {
+	background: #ffffff;
+	width: 90%;
+	margin: 0 auto;
+}
+
+aside {
+	width: 20%;
+	padding: 1%;
+}
+
+footer {
+	clear: both;
+	width: 100%;
+	padding: 5px 0 5px 0;
+	text-align: center;
+}
+
+.box {
+	background: #0000a0;
+	color: #dbffff;
+	padding: 5px;
+	margin: 5px;
+	font-size: 90%;
+	border-radius: 15px;
+	box-shadow: 5px 5px #888888;
+}
+
+.box a {
+	color: #ffffb0;
+}
+
+nav ul{
+	text-align: left;
+	overflow: hidden;
+	font-family: calibri, tahoma;
+	display: flex;
+}
+
+nav ul li {
+	border: 1px solid #d5d5d5;
+	list-style-type: none;
+	background: #98bed8;
+	margin: 3px;
+}
+
+nav ul li:hover {
+	background: #f0f0f0;
+}
+
+nav ul li a {
+	display : block;
+	padding : 4pt;
+	text-decoration : none;
+}
+
+nav ul li ul {
+	overflow: hidden;
+	display: none;
+}
+
+nav ul li:hover ul {
+	position: absolute;
+	background: #aaa;
+	padding: 0;
+	display: flex;
+	width: 177px;
+	flex-direction: column;
+}
+
+#galeria h3 {
+	text-align: center;
+}
+
+#galeria img {
+	margin: 0px 80px 0px 80px;
+}
+
+@media screen and (max-width: 720px) {
+	#tresc {
+		flex-direction: column;
+	}
+	aside {
+		width: 50%;
+	}
+	main {
+		width: 98%;
+		padding: 1%;	
+	}
+}
+
+fieldset {
+	display: inline-block;
+}
+
+

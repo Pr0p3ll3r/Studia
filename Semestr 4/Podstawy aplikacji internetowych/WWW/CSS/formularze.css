@@ -1,0 +1,16 @@
+label {
+	font-size: 120%;
+}
+
+form {
+	padding: 10px 20px;
+	margin: 10px 0;
+}
+
+label {
+	color: red;
+}
+
+input[type=text] {
+	color: green;
+}

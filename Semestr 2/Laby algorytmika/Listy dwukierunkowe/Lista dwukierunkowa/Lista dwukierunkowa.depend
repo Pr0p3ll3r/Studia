@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1623594014 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\listy dwukierunkowe\lista dwukierunkowa\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1642175724 source:e:\algorytmy analizy numerycznej\lab11\choleski\main.cpp
+	<iostream>
+	<cmath>
+

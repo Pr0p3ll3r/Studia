@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1615227253 source:c:\users\kuba\desktop\studia\semestr 2\laby c++\lab1\zad6\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

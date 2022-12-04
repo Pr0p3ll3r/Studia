@@ -1,0 +1,4 @@
+#ifndef NUMERIC_LIMITS_H
+#define NUMERIC_LIMITS_H
+
+#endif // NUMERIC_LIMITS_H

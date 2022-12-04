@@ -1,0 +1,12 @@
+Spółdzielnia sklepów
+
+1. Możliwość logowania
+2. Tworzenie koszyków z zakupami
+3. Wysyłanie prywatnych wiadomości między użytkownikami
+4. Wystawianie recenzji koszyków
+5. Wystawianie recenzji produktów
+6. Załączanie zdjęć do recenzji
+7. Zamówienie produktów z koszyka
+8. Wspominanie koszyków w wiadomościach
+9. Możliwość konta premium
+10. Historia cen

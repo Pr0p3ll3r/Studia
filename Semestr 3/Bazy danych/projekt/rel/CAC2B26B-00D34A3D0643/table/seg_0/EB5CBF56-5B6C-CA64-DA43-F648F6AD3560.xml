@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB5CBF56-5B6C-CA64-DA43-F648F6AD3560" name="premium_account">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:25:16 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_21</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="valid_through" id="ACD6DCFE-B50A-F8BC-F386-DA49B60C7E89">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:25:38 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="client_id" id="503FA3E0-2985-A239-12C4-B65AA6649A50">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:27:03 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97415B39-17DD-F954-6311-D39820FB9C1A" referredColumn="6E70EB03-6AE8-DA93-531A-EE0CB01CEFFA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="97025345-3659-1895-1505-4C9EA8008EFA" name="premium_account_PK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:27:16 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="503FA3E0-2985-A239-12C4-B65AA6649A50"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A4E7CCB-B11B-FD61-FD35-7DCDC6D163C7" name="premium_account_client_FK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 12:27:03 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="503FA3E0-2985-A239-12C4-B65AA6649A50"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

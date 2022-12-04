@@ -1,0 +1,61 @@
+1 kropka 
+SELECT c.customerkey, c.lastname, c.firstname from customer c
+inner join orderheader oh on oh.customerkey=c.customerkey
+where (oh.countrykey, oh.orderdate)=(SELECT c.countrykey, max(oh.orderdate) from orderheader oh
+                                    inner join country c on c.countrykey = oh.countrykey
+                                    where c.countryname='Australia'
+                                    group by c.countrykey)
+
+2 kropka
+SELECT distinct c.countryname Country, oh.orderdate "Last Order Date" from orderdetail od
+inner join orderheader oh on oh.orderkey=od.orderkey
+inner join product p on p.productkey=od.productkey
+inner join productsubcategory psc on psc.productsubcategorykey=p.productsubcategorykey
+inner join productcategory pc on pc.productcategorykey=psc.productcategorykey
+inner join country c on c.countrykey=oh.countrykey
+where pc.productcategoryname='Bikes'
+and oh.orderdate=(SELECT max(oh.orderdate) from orderdetail od
+                    inner join orderheader oh on oh.orderkey=od.orderkey
+                    inner join product p on p.productkey=od.productkey
+                    inner join productsubcategory psc on psc.productsubcategorykey=p.productsubcategorykey
+                    inner join productcategory pc on pc.productcategorykey=psc.productcategorykey
+                    inner join country c on c.countrykey=oh.countrykey
+                    where pc.productcategoryname='Bikes')
+                    order by c.countryname
+
+3 kropka
+SELECT distinct p.productname "Product", oh.orderdate "Last Order Date" from orderdetail od
+inner join orderheader oh on oh.orderkey=od.orderkey
+inner join product p on p.productkey=od.productkey
+inner join orderchannel oc on oc.channelkey=oh.channelkey
+where (oc.channelname, oh.orderdate)=(SELECT oc.channelname, max(oh.orderdate) from orderdetail od
+                                    inner join orderheader oh on oh.orderkey=od.orderkey
+                                    inner join product p on p.productkey=od.productkey
+                                    inner join orderchannel oc on oc.channelkey=oh.channelkey
+                                    where oc.channelname='Mobile application'
+                                    and extract(year from oh.orderdate)=2020
+                                    group by oc.channelname)
+order by p.productname
+
+4 kropka
+SELECT c.customerkey "Customer ID", c.lastname, c.firstname, oh.orderdate "First Order Date" from customer c
+inner join orderheader oh on oh.customerkey=c.customerkey
+where oh.orderdate=(
+SELECT min(oh.orderdate) from orderdetail od
+                    inner join orderheader oh on oh.orderkey=od.orderkey
+                    inner join product p on p.productkey=od.productkey
+                    inner join productsubcategory psc on psc.productsubcategorykey=p.productsubcategorykey
+                    inner join productcategory pc on pc.productcategorykey=psc.productcategorykey
+                    where pc.productcategoryname='Bikes')
+
+5 kropka
+SELECT distinct oc.channelname "Channel", oh.orderdate "Last Order Date" from orderheader oh
+inner join orderchannel oc on oc.channelkey=oh.channelkey
+inner join country c on c.countrykey=oh.countrykey
+inner join salesterritory st on st.salesterritorykey=c.salesterritorykey
+where (st.salesterritoryname, oh.orderdate)=(SELECT st.salesterritoryname, max(oh.orderdate) from orderdetail od
+                    inner join orderheader oh on oh.orderkey=od.orderkey
+                    inner join country c on c.countrykey=oh.countrykey
+                    inner join salesterritory st on st.salesterritorykey=c.salesterritorykey
+                    where st.salesterritoryname='Europe'
+                    group by st.salesterritoryname)

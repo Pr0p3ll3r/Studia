@@ -1,0 +1,4 @@
+while (true)
+do ps;
+sleep 1;
+done

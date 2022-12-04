@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<title>Dotacje</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="CSS/dotacje.css" type="text/css"/>
+	</head>
+	<body>
+		<div>
+			<form action="#" method="get">
+				<h2>Formularz dotacji</h2>
+				<fieldset>
+				Benificjent:
+				<input list="beneficjent" required><br>
+					<datalist id="beneficjent">
+						<option value="Przykład 1">
+						<option value="Przykład 2">
+						<option value="Przykład 3">
+					</datalist>
+				Wartość dotacji:
+				<input type="number" name="wartosc" required min="20" step="5"><br>
+				</fieldset><br>
+				<fieldset>
+				<legend>Dane karty płatniczej</legend>
+				Karta:
+				<input type="radio" name="karta" value="visa" >Visa
+				<input type="radio" name="karta" value="mastercard">Mastercard<br>
+				Numer:
+				<input type="text" name="numer" required pattern="[0-9]{13}|[0-9]{16}" title="Podaj numer karty złożony z 13 lub 16 cyfr"><br>
+				Data ważności:
+				<input type="month" name="month" required><br>
+				Kod CVV:
+				<input type="text" name="kod" min="3" max="4" pattern="[0-9]{3,4}" required title="Podaj kod CVV złożony z 3 lub 4 cyfr podanych na odwrocie karty"><br>
+				</fieldset><br>
+				<fieldset>
+				Darczyńca:
+				<input type="text" name="darczynca" required pattern="[a-zA-Z]{3,}" title="Podaj darczyńce dotacji. Minimum 3 znaki"><br>	
+				</fieldset><br><br><br>
+				<input type="submit" value="Rejestruj">
+				<input type="reset" value="Anuluj">
+			</form>
+		</div>
+	</body>
+</html>

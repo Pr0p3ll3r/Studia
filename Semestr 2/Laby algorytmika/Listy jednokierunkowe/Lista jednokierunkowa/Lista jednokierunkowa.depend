@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1621965549 source:c:\users\kuba\desktop\studia\semestr 2\laby algorytmika\lista\lista jednokierunkowa\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css" type="text/css"/>
+	<link rel="stylesheet" href="CSS/formularze.css" type="text/css"/>
+ <title>Budowa formularzy</title>
+</head>
+<body>
+ <div id="kontener">
+		<div id="baner"><h2>Szybki kurs HTML</h2></div>
+		<div id="menu">
+		  <ul id="nav">
+			<li><a href="index.html">Podstawowe znaczniki</a></li>
+			<li><a href="tabele.html">Tworzenie tabel</a></li>
+			<li><a href="">Formularze</a>
+			<ul>
+			<li><a href="formularze.html">Pola formularzy</a></li>
+			<li><a href="formularze.html">Obliczenia w formularzu</a></li>
+			</ul>
+			</li>
+			<li><a href="galeria.html" title="">Galeria</a></li>
+		  </ul>
+		</div>	
+		<div id="tresc">
+		<h3>Przykładowy znaczniki formularza HTML to:</h3>
+		 <ul style="list-style-type:square;">
+		  <li>&lt;form&gt; - znacznik podstawowy zawierający pola formularza</li>
+		  <li>&lt;input&gt; - znacznik umożliwia wstawienia różnych pół (pole tekstowe, przycisk typu radio, 
+		  przycisk typu checkbox) w zależności od wartości jego atrybutu type</li>
+		  <li>&lt;select&gt; - pole formularza typu lista rozwijana</li>
+		  <li>&lt;textarea&gt; - pole formularza typu obszar tekstowy</li>
+		  <li>&lt;button&gt; - pole formularza typu przycisk</li>
+		 </ul>	
+		<h3>Przykładowy formularz HTML:</h3>
+			<form action="mailto:beatap@cs.pollub.pl" method="post">
+			<label for="lastname">Nazwisko :</label>
+			<input type="text" id="lastname" name="lastname"/> <br>
+			<label for="age">Wiek:</label>
+			<input type="text" id="age" name="age"/> <br>
+			<label for="country">Państwo:</label>
+			<select size="1" id="country" name="country">
+			<option value="p">Polska</option>
+			<option value="n">Niemcy</option>
+			<option value="h">Hiszpania</option>
+			</select><br>
+			<label for="mail">Adres e-mail:</label>
+			<input type="text" id="mail" name="mail"/> <br>
+			<h4>Zamawiam tutorial z języka:</h4>
+			<input type="checkbox" id="PHP" name="PHP" value="PHP" /> <label for="PHP">Język PHP</label>
+			<input type="checkbox" id="C/C++" name="C/C++" value="C/C++" /> <label for="C/C++">Język C/C++</label>
+			<input type="checkbox" id="Java" name="Java" value="Java" /> <label for="Java">Język Java </label><br>
+			<h4>Sposób zapłaty:</h4>
+			<input type="radio" id="ec" name="method" value="ec" /> <label for="ec">eurocard </label>
+			<input type="radio" id="v" name="method" value="v" /> <label for="v">visa </label>
+			<input type="radio" id="pb" name="method" value="pb" /> <label for="pb">przelew bankowy </label><br>
+			<input type="submit" value="Wyślij" />
+			<input type="reset" value="Anuluj" />
+			</form>
+		</div>
+		<div id="pasek">
+			<div class="box">
+			<h3>Walidatory:</h3>
+			 <ul>
+			  <li> <a href="http://validator.w3.org/">HTML</a></li>
+			  <li> <a href="https://jigsaw.w3.org/css-validator/validator">CSS</a></li>
+			 </ul>
+			</div>
+		<div class="box">
+		 <h3>Kursy:</h3>
+		 <ul>
+		  <li> <a href="https://www.w3schools.com/html/">HTML</a></li>
+		  <li> <a href="https://www.w3schools.com/css/">CSS</a></li>
+		  <li> <a href="https://www.w3schools.com/js/">JS</a></li>
+		  <li> <a href="https://www.w3schools.com/php/">PHP</a></li>
+		 </ul>
+		 </div>
+		</div>
+		<div id="stopka">&copy;JD</div>
+ </div>
+</body>
+</html>

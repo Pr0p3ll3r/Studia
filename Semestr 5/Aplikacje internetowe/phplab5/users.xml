@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <userName>admin</userName>
+        <passwd>admin</passwd>
+        <fullName>Administrator</fullName>
+        <email>admin@gmail.com</email>
+        <date>2018-09-10</date>
+        <status>2</status>
+    </user>
+    <user>
+        <userName>beatap</userName>
+        <passwd>beatap</passwd>
+        <fullName>Beata P.</fullName>
+        <email>beatap@gmail.com</email>
+        <date>2018-10-10</date>
+        <status>1</status>
+    </user>
+<user><userName>now321</userName><passwd>$2y$10$hvCOpOgbF3784kpE9NrWRuXYxJVOXkSs5vYYCG20fk0UZTJCmQhgS</passwd><fullName>Adam Nowak</fullName><email>asd@asd.com</email><date>2022-11-18</date><status>1</status></user></users>

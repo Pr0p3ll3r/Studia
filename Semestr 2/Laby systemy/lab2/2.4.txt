@@ -1,0 +1,6 @@
+a) cp [abg-n]* ../kosz
+
+b) find [aoe]la | mv [aoe]la [AOE]la
+ 
+c) mv c*0[0-1] ../kosz
+

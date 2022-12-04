@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1610387320 source:c:\users\kuba\desktop\laby c\laby 11\11.4\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1610387359 source:c:\users\kuba\desktop\laby c\laby 11\11.4\tablicedyn.c
+	<stdio.h>
+	<stdlib.h>
+	"TabliceDyn.h"
+
+1610387299 c:\users\kuba\desktop\laby c\laby 11\11.4\tablicedyn.h
+

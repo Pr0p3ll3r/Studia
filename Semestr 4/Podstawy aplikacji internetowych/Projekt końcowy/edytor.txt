@@ -1,0 +1,108 @@
+<h2 class="section-heading mb-5">
+                                <span class="section-heading-lower fw-bold">Edytowanie pizzy</span>
+                            </h2>
+							<form id="formPizza" action="?" method="post">
+								<h4>Ilość</h4>
+									<input class="text-center" type="number" id="ilosc" min="1" value="1"/>
+								<br><br><h4>Rozmiar</h4>
+									<input class="form-check-input" type="radio" id="32" name="rozmiar" value="32" checked/>
+									<label for="32">32cm - 28zł</label><br> 
+									<input class="form-check-input" type="radio" id="42" name="rozmiar" value="42"/>
+									<label for="42">42cm - 32zł<br></label><br><br>
+								<h4>Składniki (+2zł) <br><span id="error_skladniki" class="error"></span></h4>
+								<div class="table-responsive">
+									<table class="table table-primary">
+										<tr>
+											<td>
+												<input class="form-check-input" type="checkbox" id="ananas" name="skladnik"/>
+												<label for="ananas">ananas</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="boczek" name="skladnik"/>
+												<label for="boczek">boczek</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="bekon" name="skladnik"/>
+												<label for="bekon">bekon</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="cebula" name="skladnik"/>
+												<label for="cebula">cebula</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="czosnek" name="skladnik"/>
+												<label for="czosnek">bekon</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="form-check-input" type="checkbox" id="kiełbasa" name="skladnik"/>
+												<label for="kiełbasa">kiełbasa</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="krewetki" name="skladnik"/>
+												<label for="krewetki">krewetki</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="kukurydza" name="skladnik"/>
+												<label for="kukurydza">kukurydza</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="kurczak" name="skladnik"/>
+												<label for="kurczak">kurczak</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="oliwki" name="skladnik"/>
+												<label for="oliwki">oliwki</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="form-check-input" type="checkbox" id="papryka_chilli" name="skladnik"/>
+												<label for="papryka_chilli">papryka chilli</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="papryka" name="skladnik"/>
+												<label for="papryka">papryka</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="pieczarki" name="skladnik"/>
+												<label for="pieczarki">pieczarki</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="pomidor" name="skladnik"/>
+												<label for="pomidor">pomidor</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="salami" name="skladnik"/>
+												<label for="salami">salami</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="form-check-input" type="checkbox" id="ser_feta" name="skladnik"/>
+												<label for="ser_feta">ser feta</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="ser_parmezan" name="skladnik"/>
+												<label for="ser_parmezan">ser parmezan</label> 
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="ser_plesniowy" name="skladnik"/>
+												<label for="ser_plesniowy">ser pleśniowy</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="szpinak" name="skladnik"/>
+												<label for="szpinak">szpinak</label>
+											</td>
+											<td>
+												<input class="form-check-input" type="checkbox" id="szynka" name="skladnik"/>
+												<label for="szynka">szynka</label>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<h3><span id="cena">Cena pizzy: 28zł</span></h3><br>									
+								<button class="btn btn-primary" type="button" onclick="wczytajKoszyk()">Anuluj</button>
+								<button class="btn btn-primary" type="button" id="zapisz" onclick="">Zapisz edycje</button> 
+							</form>  

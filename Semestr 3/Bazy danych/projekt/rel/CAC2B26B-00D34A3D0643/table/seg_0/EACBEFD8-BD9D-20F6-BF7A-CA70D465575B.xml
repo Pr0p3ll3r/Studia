@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EACBEFD8-BD9D-20F6-BF7A-CA70D465575B" name="media">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 13:11:03 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<ordsAlias>table_28</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="36BAB5F8-B9C0-E095-F17E-C9946A5F6D1A">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 13:12:21 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="image" id="92712802-4BCB-CD04-29E9-67DE7FA01D59">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 13:12:21 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT041</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4DCB152C-F582-CB78-CB30-CCB727AA5D20" name="media_PK">
+<createdBy>student</createdBy>
+<createdTime>2021-10-22 13:12:32 UTC</createdTime>
+<ownerDesignName>projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36BAB5F8-B9C0-E095-F17E-C9946A5F6D1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

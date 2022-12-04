@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Budowa formularzy</title>
+</head>
+<body>
+    <div id="kontener">
+    <h2>Formularz zamówienia</h2>
+	<form action="odbierz.php" method="POST">
+            <table>
+                <tr>
+                    <td><label for="lastname">Nazwisko:</label></td>
+                    <td><input type="text" id="lastname" name="lastname"/></td>	
+		</tr>
+		<tr>
+                    <td><label for="age">Wiek:</label></td>
+                    <td><input type="text" id="age" name="age"/></td>
+		</tr>
+		<tr>
+                    <td><label for="country">Państwo:</label></td>
+                    <td><select size="1" id="country" name="country">
+			<option value="Polska">Polska</option>
+			<option value="Niemcy">Niemcy</option>
+			<option value="Hiszpania">Hiszpania</option></select></td>
+		</tr>
+                <tr>
+                    <td><label for="mail">Adres e-mail:</label></td>
+                    <td><input type="text" id="mail" name="mail"/></td>
+		</tr>						
+		</table>
+		<h4>Zamawiam tutorial z języka:</h4>
+                    <input type="checkbox" id="lang1" name="lang1" value="PHP" /> <label for="lang1">PHP</label>
+                    <input type="checkbox" id="lang2" name="lang2" value="C/C++" /> <label for="lang2">C/C++</label>
+                    <input type="checkbox" id="lang3" name="lang3" value="Java" /> <label for="lang3">Java</label><br>
+		<h4>Sposób zapłaty:</h4>
+                    <input type="radio" id="ec" name="method" value="eurocard" /> <label for="ec">eurocard </label>
+                    <input type="radio" id="v" name="method" value="visa" /> <label for="v">visa </label>
+                    <input type="radio" id="pb" name="method" value="przelew bankowy" /> <label for="pb">przelew bankowy </label><br>
+                    <input type="submit" value="Wyślij" />
+                    <input type="reset" value="Anuluj" />		
+		</form>
+    </div>
+</body>
+</html>

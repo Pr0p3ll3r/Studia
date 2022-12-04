@@ -1,0 +1,28 @@
+h4 {
+	letter-spacing: 4px;
+}
+
+p {
+	color: red;
+	text-indent: 5px;
+	margin: 0 0 30px 0;
+}
+
+.nieparzysty {
+	font-style: italic;
+}
+
+.parzysty {
+	background: yellow;
+	text-align: center;
+}
+
+#pierwszy {
+	text-indent: 15%;
+}
+
+#piaty {
+	border: blue;
+	border-style: dashed;
+	border-left: none;
+}

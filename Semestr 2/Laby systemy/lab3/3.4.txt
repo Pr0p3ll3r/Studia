@@ -1,0 +1,1 @@
+x=0; for i in `find ./ -type f`; do let x=x+1; mv $i p$x; done

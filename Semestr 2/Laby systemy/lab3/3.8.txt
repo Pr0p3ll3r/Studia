@@ -1,0 +1,12 @@
+echo -n "Ile liczb chcesz podac? "
+read n
+suma=0
+i=$n
+while [ "$i" -ne "0" ]
+do echo -n "Podaj liczbe: ";
+read x;
+let suma+=x;
+let i=i-1;
+done;
+echo -n "Srednia arytmetyczna: "
+echo "scale=2; $suma/$n" | bc

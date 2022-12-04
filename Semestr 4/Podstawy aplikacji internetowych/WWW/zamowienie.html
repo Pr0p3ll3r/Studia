@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Kreator pizzy</title>
+</head>
+<body>
+ <div id="kontener">
+		<div id="baner"><h1>Kreator pizzy</h1></div>
+		<div id="tresc">
+			<form action="mailto:beatap@cs.pollub.pl" method="post">
+			<fieldset>
+			<legend>Rozmiar:</legend>
+			 <input type="radio" id="mala" name="rozmiar"/> <label for="mala">Mała</label>		
+			 <input type="radio" id="srednia" name="rozmiar"/>  <label for="srednia">Średnia</label>		 
+			 <input type="radio" id="duza" name="rozmiar"/> <label for="duza">Duża</label>
+			</fieldset>
+			<fieldset>
+			<legend>Dodatki:</legend>
+			 <input type="checkbox" id="szynka" name="szynka" value="szynka" /> <label for="szynka">Szynka</label>
+			 <input type="checkbox" id="salami" name="salami" value="salami" /> <label for="salami">Salami</label>
+			 <input type="checkbox" id="boczek" name="boczek" value="boczek" /> <label for="boczek">Boczek</label>
+			 <input type="checkbox" id="papryka" name="papryka" value="papryka" /> <label for="papryka">Papryka</label>
+			 <input type="checkbox" id="pomidor" name="pomidor" value="pomidor" /> <label for="pomidor">Pomidor</label>
+			 <input type="checkbox" id="ser" name="ser" value="ser" /> <label for="ser">Ser</label>
+			</fieldset>
+			<fieldset>
+			<legend>Sosy:</legend>
+			Wybierz sos:
+			<select size="4" id="sosy" name="sosy" multiple>
+			 <option value="s">Pomidorowy</option>
+			 <option value="c">Czosnkowy</option>
+			 <option value="kl">Ketchup łagodny</option>
+			 <option value="kp">Ketchup pikantny</option>
+			 </select><br>
+			 Inne uwagi:
+			 <textarea cols="70" rows="5" name="uwagi"></textarea>
+			</fieldset>		
+			 <input type="reset" value="Wyczyść dane" />
+			 <input type="submit" value="Wyślij zamówienie" />					 
+			</form>
+		</div>
+ </div>
+</body>
+</html>
