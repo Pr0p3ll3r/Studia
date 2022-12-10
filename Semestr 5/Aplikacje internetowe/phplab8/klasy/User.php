@@ -27,7 +27,7 @@ class User {
         $this->passwd= password_hash($passwd, PASSWORD_DEFAULT);
         $this->fullName=$fullName;
         $this->email=$email;
-        $this->date=(new DateTime())->format('Y-m-d H:i:s');
+        $this->date=(new DateTime())->format('Y-m-d');
         $this->status=User::STATUS_USER;
     }
     public function show() {
