@@ -30,7 +30,8 @@ class UserManager {
         </table>
         <input type="submit" value="Zaloguj" name="zaloguj" />
         <input type="reset" value="Anuluj"/>
-        </form></p> <?php
+        </form></p> 
+        <?php
     }
     function login($db) {
         //funkcja sprawdza poprawność logowania
@@ -43,11 +44,11 @@ class UserManager {
         $dane = filter_input_array(INPUT_POST, $args);
         //sprawdź czy użytkownik o loginie istnieje w tabeli users
         //i czy podane hasło jest poprawne
+        session_start();
         $login = $dane["login"];
         $passwd = $dane["passwd"];
         $userId = $db->selectUser($login, $passwd, "users");
         if ($userId >= 0) { //Poprawne dane
-            session_start();
             //usuń wszystkie wpisy historyczne dla użytkownika o $userId
             $sql = "DELETE FROM logged_in_users WHERE userId=$userId";
             $db->delete($sql);
@@ -70,7 +71,7 @@ class UserManager {
         $sql = "DELETE FROM logged_in_users WHERE sessionId='$id'";
         $db->delete($sql);
     }
-    function getLoggedInUser($db, $sessionId) {
+    function getLoggedInUserBySession($db, $sessionId) {
         //wynik $userId - znaleziono wpis z id sesji w tabeli logged_in_users
         //wynik -1 - nie ma wpisu dla tego id sesji w tabeli logged_in_users
         $userId = -1;
@@ -83,5 +84,31 @@ class UserManager {
             }
         }
         return $userId;         
+    }
+    function getLoggedInUserById($db) {
+        $login = $_POST["login"];
+        $passwd =  $_POST["passwd"];
+        $userId = $db->selectUser($login, $passwd, "users");
+        $sql = ("SELECT * FROM logged_in_users WHERE userId='$userId'");
+        if($userId > -1){
+            if ($result = $db->getMysqli()->query($sql)) {
+                $ile = $result->num_rows;
+                if ($ile == 1) {
+                    $currentDate = new DateTime(date('Y/m/d H:i:s'));
+                    $row = $result->fetch_assoc();
+                    $dateFromTable = $row["lastUpdate"]; 
+                    $diff = $currentDate->diff(new DateTime($dateFromTable));
+                    $minutes = $diff->days * 24 * 60;
+                    $minutes += $diff->h * 60;
+                    $minutes += $diff->i;
+                    if($minutes > 1)
+                        return false;
+                    else
+                        return true;
+                }
+            }
+        }
+
+        return false;         
     }
 }

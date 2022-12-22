@@ -53,10 +53,18 @@ class Baza {
         return $tresc;
     }
     public function insert($sql) {
-        if($this->mysqli->query($sql)) return true; else return false;
+        if($this->mysqli->query($sql)) {
+            return true;      
+        } else { 
+            return false;         
+        }
     }
     public function delete($sql) {
-        if($this->mysqli->query($sql)) return true; else return false;
+        if($this->mysqli->query($sql)) {
+            return true;      
+        } else { 
+            return false;         
+        }
     }    
     public function getMysqli() {
         return $this->mysqli;
@@ -78,5 +86,4 @@ class Baza {
         }
         return $id; //id zalogowanego użytkownika(>0) lub -1
     }
-} //koniec klasy Baza
-
+}

@@ -21,16 +21,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             }
             //kliknięto przycisk submit z name = zaloguj
             if (filter_input(INPUT_POST, "zaloguj")) {
-                $userId=$um->login($db); //sprawdź parametry logowania
-                if ($userId > 0) {
-                    header("location:testLogin.php");
-                } else {
-                    echo "<p>Błędna nazwa użytkownika lub hasło</p>";
+                if($um->getLoggedInUserById($db)){
+                    echo "<p>Użytkownik jest już zalogowany</p>";
                     $um->loginForm(); //Pokaż formularz logowania
                 }
+                else
+                {
+                    $userId=$um->login($db); //sprawdź parametry logowania
+                    if ($userId > 0) {
+                        header("location:testLogin.php");
+                    } else {
+                        echo "<p>Błędna nazwa użytkownika lub hasło</p>";
+                        $um->loginForm(); //Pokaż formularz logowania
+                    }
+                }
             } else {
-                //pierwsze uruchomienie skryptu processLogin
-                $um->loginForm();
+                session_start();
+                $userId = $um->getLoggedInUserBySession($db, session_id());
+                if($userId >= 0){
+                    header("location:testLogin.php");
+                }
+                else{
+                    $um->loginForm();
+                }
             }
         ?>
     </body>

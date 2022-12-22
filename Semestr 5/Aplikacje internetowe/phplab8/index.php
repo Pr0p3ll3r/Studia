@@ -13,18 +13,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             include_once('klasy/User.php');
             include_once('klasy/RegistrationForm.php');
             include_once('klasy/Baza.php');         
-            $bd = new Baza("localhost", "root", "", "klienci"); 
+            $db = new Baza("localhost", "root", "", "klienci"); 
             $rf = new RegistrationForm(); //wyświetla formularz rejestracji
             if (filter_input(INPUT_POST, 'submit', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) {
-                $user = $rf->checkUser($bd); //sprawdza poprawność danych
-                if ($user === NULL)
-                    echo "<p>Niepoprawne dane rejestracji.</p>";
-                else{
-                echo "<p>Poprawne dane rejestracji:</p>";
-                $user->show();
+                //Sprawdź czy użytkownik o podanym loginie już istnieje
+                $userName = $_POST['userName'];
+                $check = "SELECT * FROM users WHERE userName='$userName'";
+                if ($result = $db->getMysqli()->query($check)) {
+                    $ile = $result->num_rows;
+                    if ($ile == 1) {
+                        echo "<p>Użytkownik o podanej nazwie użytkownika już istnieje.</p>";
+                    }
+                }
+                else //Nie istnieje
+                {
+                    $user = $rf->checkUser($db); //sprawdza poprawność danych
+                    if ($user === NULL){
+                        echo "<p>Niepoprawne dane rejestracji.</p>";
+                    }
+                    else {
+                        echo "<p>Poprawne dane rejestracji:</p>";
+                        $user->show();
+                    }
                 }
             }
-            User::getAllUsersFromDB($bd);
+            User::getAllUsersFromDB($db);
         ?>
     </body>
 </html>

@@ -15,7 +15,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             $db = new Baza("localhost", "root", "", "klienci");
             $um = new UserManager();
             session_start();
-            $userId = $um->getLoggedInUser($db, session_id());
+            $userId = $um->getLoggedInUserBySession($db, session_id());
             if($userId >= 0){
                 $sql = "SELECT * FROM users WHERE id='$userId'";
                 if ($result = $db->getMysqli()->query($sql)) {

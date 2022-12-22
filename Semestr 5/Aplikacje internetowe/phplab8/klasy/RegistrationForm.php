@@ -46,9 +46,8 @@ class RegistrationForm {
             }
         }
         if ($errors === "") {
-        //Dane poprawne – utwórz obiekt user
-            $this->user=new User($dane['userName'], $dane['fullName'],
-            $dane['email'],$dane['passwd']);
+            //Dane poprawne - utwórz obiekt user i dodaj do bazy
+            $this->user=new User($dane['userName'], $dane['fullName'],$dane['email'],$dane['passwd']);
             $this->user->saveDB($db);
         } else {
             echo "<p>Błędne dane:$errors</p>";
