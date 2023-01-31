@@ -8,7 +8,7 @@
 <script src="{{ URL::asset('js/scripts.js'); }}"></script>
 <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
 
-<link rel="icon" type="image/x-icon" href="{{URL::asset('images/icon.ico');}}"/>
+<link rel="icon" href="{{ URL::asset('favicon.ico') }}" type="image/x-icon"/>
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:900,900i" rel="stylesheet" />
 
