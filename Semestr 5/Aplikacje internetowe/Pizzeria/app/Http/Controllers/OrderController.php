@@ -9,6 +9,7 @@ use App\Http\Controllers\CartController;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\OrderAddress;
+use App\Models\OrderFeedback;
 
 class OrderController extends Controller
 {
@@ -16,6 +17,14 @@ class OrderController extends Controller
     {
         $orders = Order::all();
         return view('profile.orders', ['orders' => $orders]);
+    }   
+    
+    public function ordered() 
+    {
+        if (url()->previous() != url('cart')) {
+            return redirect()->to('/'); 
+        }
+        return view('pages.ordered');
     }   
 
     public function store(Request $request): RedirectResponse
@@ -55,5 +64,19 @@ class OrderController extends Controller
 
         session()->forget('cart');      
         return redirect('/ordered'); 
+    }
+    
+    public function feedback(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'feedback' => ['required', 'string', 'max:500']
+        ]);
+        
+        OrderFeedback::create([
+            'order_id' => $request->id,
+            'content' => $request->feedback
+        ]);
+        
+        return redirect('/orders'); 
     }
 }

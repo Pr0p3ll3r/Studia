@@ -32,9 +32,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/updatecart', [CartController::class, 'update'])->name('cart.update');
     Route::post('/removefromcart', [CartController::class, 'remove'])->name('cart.remove');
 
-    Route::get('/orders', [OrderController::class, 'create']);
-    Route::post('sendorder', [OrderController::class, 'store'])->name('order.send');
-    Route::get('/ordered', function () { return view('pages.ordered'); });
+    Route::get('/orders', [OrderController::class, 'create'])->name('order.list');
+    Route::post('/sendorder', [OrderController::class, 'store'])->name('order.send');
+    Route::get('/ordered', [OrderController::class, 'ordered'])->name('order.confirmation');
+    
+    Route::post('/givefeedback', [OrderController::class, 'feedback'])->name('order.feedback');
 });
 
 require __DIR__ . '/auth.php';

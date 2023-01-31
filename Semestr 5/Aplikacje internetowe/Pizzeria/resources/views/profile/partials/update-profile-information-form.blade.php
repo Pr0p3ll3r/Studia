@@ -1,6 +1,6 @@
 <div>
     <header>
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100 fw-bold">
             {{ __('Profile Information') }}
         </h2>
 
@@ -19,21 +19,21 @@
 
         <div>
             <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" 
+            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full form-control" :value="old('name', $user->name)" 
                           pattern="[A-Z]{1}[a-z]+" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
         
         <div>
             <x-input-label for="phone" :value="__('Phone')" />
-            <x-text-input id="phone" name="phone" type="text" class="mt-1 block w-full" :value="old('phone', $user->phone)" 
+            <x-text-input id="phone" name="phone" type="text" class="mt-1 block w-full form-control" :value="old('phone', $user->phone)" 
                           pattern="^\d{9}" required autocomplete="tel-national" />
             <x-input-error class="mt-2" :messages="$errors->get('phone')" />
         </div>
 
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="email" />
+            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full form-control" :value="old('email', $user->email)" required autocomplete="email" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())

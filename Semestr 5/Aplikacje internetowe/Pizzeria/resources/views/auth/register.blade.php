@@ -10,7 +10,7 @@
                             <!-- Name -->
                             <div>
                                 <x-input-label for="name" :value="__('Name')" />
-                                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" 
+                                <x-text-input id="name" class="block mt-1 w-full form-control" type="text" name="name" :value="old('name')" 
                                               pattern="[A-Z]{1}[a-z]+" required autofocus />
                                 <x-input-error :messages="$errors->get('name')" class="mt-2" />
                             </div>
@@ -18,7 +18,7 @@
                             <!-- Email Address -->
                             <div class="mt-4">
                                 <x-input-label for="email" :value="__('Email')" />
-                                <x-text-input id="email" class="block mt-1 w-full" 
+                                <x-text-input id="email" class="block mt-1 w-full form-control" 
                                               type="email" name="email" :value="old('email')" required />
                                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
                             </div>
@@ -26,7 +26,7 @@
                             <!-- Phone number -->
                             <div class="mt-4">
                                 <x-input-label for="phone" :value="__('Phone')" />
-                                <x-text-input id="phone" class="block mt-1 w-full" 
+                                <x-text-input id="phone" class="block mt-1 w-full form-control" 
                                               type="text" name="phone" :value="old('phone')" 
                                               pattern="^\d{9}" required />
                                 <x-input-error :messages="$errors->get('phone')" class="mt-2" />
@@ -36,7 +36,7 @@
                             <div class="mt-4">
                                 <x-input-label for="password" :value="__('Password')" />
 
-                                <x-text-input id="password" class="block mt-1 w-full"
+                                <x-text-input id="password" class="block mt-1 w-full form-control"
                                               type="password"
                                               name="password"
                                               pattern="(?=.*\d)(?=.*[!@#$%^&+=])(?=.*[a-z])(?=.*[A-Z]).{8,}" 
@@ -49,7 +49,7 @@
                             <div class="mt-4">
                                 <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
 
-                                <x-text-input id="password_confirmation" class="block mt-1 w-full"
+                                <x-text-input id="password_confirmation" class="block mt-1 w-full form-control"
                                               type="password"
                                               pattern="(?=.*\d)(?=.*[!@#$%^&+=])(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                                               name="password_confirmation" required />

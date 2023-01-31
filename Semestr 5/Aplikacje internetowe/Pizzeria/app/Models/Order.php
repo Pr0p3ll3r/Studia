@@ -30,4 +30,9 @@ class Order extends Model
     {
         return $this->hasOne('App\Models\OrderAddress');
     }
+    
+    public function feedback()
+    {
+        return $this->hasOne('App\Models\OrderFeedback');
+    }
 }

@@ -1,6 +1,6 @@
 <div>
     <header>
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100 fw-bold">
             {{ __('Delete Account') }}
         </h2>
 
@@ -34,8 +34,8 @@
                     id="passwordDelete"
                     name="password"
                     type="password"
-                    class="mt-1 block w-full"
-                    placeholder="Password"
+                    class="mt-1 block w-full form-control"
+                    placeholder="{{__('Password')}}"
                 />
 
                 <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2"/>

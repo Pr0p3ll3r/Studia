@@ -10,12 +10,12 @@
                         <div class="table-responsive">
                             <table id="koszyk" class="table table-primary">
                                 <tr> 
-                                    <td class="col-md-1">Ilość</td> 
-                                    <td class="col-md-3">Nazwa</td>
-                                    <td class="col-md-2">Wielkość</td> 
-                                    <td class="col-md-2">Zmień ilość</td> 
-                                    <td class="col-md-2">Cena</td> 
-                                    <td class="col-md-1">Usuń</td> 
+                                    <td class="col-md-1 fw-bold">Ilość</td> 
+                                    <td class="col-md-3 fw-bold">Nazwa</td>
+                                    <td class="col-md-2 fw-bold">Wielkość</td> 
+                                    <td class="col-md-2 fw-bold">Zmień ilość</td> 
+                                    <td class="col-md-2 fw-bold">Cena</td> 
+                                    <td class="col-md-1 fw-bold">Usuń</td> 
                                 </tr>
                                 @foreach($cart as $id => $item)
                                 <tr> 
@@ -83,7 +83,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <?php 
+                                            @php
                                             $address = DB::table('order_addresses')
                                                     ->join('orders', 'order_addresses.order_id', '=', 'orders.id')
                                                     ->join('users', 'orders.user_id', '=', 'users.id')
@@ -91,7 +91,7 @@
                                                     ->select('street', 'houseNumber', 'apartmentNumber')
                                                     ->latest('orders.created_at')                                            
                                                     ->first();
-                                            ?>                              
+                                            @endphp                             
                                     <x-input-label for="street" :value="__('Street')" />
                                     <x-text-input id="street" name="street" type="text" class="mt-1 block w-full form-control" :value="old('street', $address->street ?? '')" 
                                                   pattern="[A-Za-z ]+" maxlength="255" required autocomplete="address-line1" />
