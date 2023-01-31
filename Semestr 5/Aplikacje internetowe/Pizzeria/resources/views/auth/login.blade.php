@@ -1,7 +1,7 @@
 <x-app-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-    <section class="page-section cta">
+    <div class="page-section cta">
         <div class="container">
             <div class="row">
                 <div class="col-xl-9 mx-auto">
@@ -58,5 +58,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </x-app-layout>

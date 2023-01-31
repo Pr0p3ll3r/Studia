@@ -1,4 +1,4 @@
-<section>
+<div>
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             {{ __('Profile Information') }}
@@ -27,7 +27,7 @@
         <div>
             <x-input-label for="phone" :value="__('Phone')" />
             <x-text-input id="phone" name="phone" type="text" class="mt-1 block w-full" :value="old('phone', $user->phone)" 
-                          pattern="^\d{9}" required autofocus autocomplete="phone" />
+                          pattern="^\d{9}" required autocomplete="tel-national" />
             <x-input-error class="mt-2" :messages="$errors->get('phone')" />
         </div>
 
@@ -69,4 +69,4 @@
             @endif
         </div>
     </form>
-</section>
+</div>

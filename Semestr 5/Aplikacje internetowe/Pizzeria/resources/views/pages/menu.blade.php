@@ -7,7 +7,7 @@
                     @csrf
                     <div class="col mb-5"> 
                         <!-- Pizza image-->
-                        <img class="card-img-top" src="./images/pizza/{{$pizza->name}}.png" alt="Pizza {{$pizza->name}}" />
+                        <img class="card-img-top" src="./images/pizza/{{$pizza->name}}.png" alt="Pizza {{$pizza->name}}">
                         <!-- Pizza details-->
                         <div class="card-body p-4">
                             <div class="text-center text-white">

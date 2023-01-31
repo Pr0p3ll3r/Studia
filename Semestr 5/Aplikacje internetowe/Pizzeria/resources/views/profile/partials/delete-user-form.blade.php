@@ -1,4 +1,4 @@
-<section class="space-y-6">
+<div>
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             {{ __('Delete Account') }}
@@ -28,10 +28,10 @@
             </p>
 
             <div class="mt-6">
-                <x-input-label for="password" value="Password" class="sr-only" />
+                <x-input-label for="passwordDelete" value="Password" class="sr-only" />
 
                 <x-text-input
-                    id="password"
+                    id="passwordDelete"
                     name="password"
                     type="password"
                     class="mt-1 block w-full"
@@ -52,4 +52,4 @@
             </div>
         </form>
     </x-modal>
-</section>
+</div>

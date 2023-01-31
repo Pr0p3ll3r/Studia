@@ -1,5 +1,5 @@
 <x-app-layout>
-    <section class="page-section cta">
+    <div class="page-section cta">
         <div class="container">
             <div class="row">
                 <div class="col-xl-9 mx-auto">
@@ -25,5 +25,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </x-app-layout>

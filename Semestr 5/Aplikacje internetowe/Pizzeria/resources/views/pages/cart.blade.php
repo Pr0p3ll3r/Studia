@@ -94,19 +94,19 @@
                                             ?>                              
                                     <x-input-label for="street" :value="__('Street')" />
                                     <x-text-input id="street" name="street" type="text" class="mt-1 block w-full form-control" :value="old('street', $address->street ?? '')" 
-                                                  pattern="[A-Za-z ]+" maxlength="255" required autocomplete="street" />
+                                                  pattern="[A-Za-z ]+" maxlength="255" required autocomplete="address-line1" />
                                     <x-input-error class="mt-2" :messages="$errors->get('street')" />
                                     </td>
                                     <td>
                                     <x-input-label for="houseNumber" :value="__('House Number')" />
                                     <x-text-input id="houseNumber" name="houseNumber" type="text" class="mt-1 block w-full form-control" :value="old('houseNumber', $address->houseNumber ?? '')" 
-                                                  pattern="[A-Za-z0-9]+" maxlength="5" required autocomplete="houseNumber" />
+                                                  pattern="[A-Za-z0-9]+" maxlength="5" required autocomplete="address-line1" />
                                     <x-input-error class="mt-2" :messages="$errors->get('houseNumber')" />
                                     </td>
                                     <td>
                                     <x-input-label for="apartmentNumber" :value="__('Apartment Number')" />
                                     <x-text-input id="apartmentNumber" name="apartmentNumber" type="text" class="mt-1 block w-full form-control" :value="old('apartmentNumber', $address->apartmentNumber ?? '')" 
-                                                  pattern="[A-Za-z0-9]+" maxlength="5" autocomplete="apartmentNumber" />
+                                                  pattern="[A-Za-z0-9]+" maxlength="5" autocomplete="address-line2" />
                                     </td>
                                     </tr>                                                            
                                     <tr>
@@ -117,21 +117,19 @@
                                     <tr class="text-center">
                                         <td colspan="3">
                                             <h4><b>Jak chcesz zapłacić?</b></h4>
-                                            <input class="form-check-input" type="radio" value="gotowka" name="payment" checked />
-                                            <label for="gotowka">Gotówka</label><br>
-                                            <input class="form-check-input" type="radio" value="karta" name="payment"/>
-                                            <label for="karta">Karta płatnicza</label><br>
-                                            <input class="form-check-input" type="radio" value="online" name="payment"/>
-                                            <label for="online">Płatność online</label><br><br>
-                                            <div>
-                                                <input class="form-check-input" type="checkbox" id="rules" name="regulamin" required />
-                                                <label for="regulamin">*Akceptuję regulamin</label>
-                                            </div>
+                                            <input class="form-check-input" type="radio" id="gotowka" value="gotowka" name="payment" checked>
+                                            <label for="gotowka">Gotówka</label><br>                                                              
+                                            <input class="form-check-input" type="radio" id="karta" value="karta" name="payment">
+                                            <label for="karta">Karta płatnicza</label><br> 
+                                            <input class="form-check-input" type="radio" id="online" value="online" name="payment">
+                                            <label for="online">Płatność online</label><br><br>                                           
+                                            <input class="form-check-input" type="checkbox" id="rules" name="rules" required>
+                                            <label for="rules">*Akceptuję regulamin</label>                                                
                                         </td>												
                                     </tr>
                                 </table>
                             </div>													
-                            <input class="btn btn-primary" type="submit" id="zamawiam" value="Zamawiam"/> 
+                            <input class="btn btn-primary" type="submit" id="zamawiam" value="Zamawiam"> 
                         </form>
                     </div>
                 </div>

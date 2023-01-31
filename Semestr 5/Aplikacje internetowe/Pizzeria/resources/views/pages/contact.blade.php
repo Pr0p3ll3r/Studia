@@ -47,20 +47,20 @@
                         <p class="address mb-5">
                             <em>
                                 <strong>ul. Nadbystrzycka 38 D</strong>
-                                <br />
+                                <br>
                                 20 – 618 Lublin
                             </em>
                         </p>
                         <p class="address mb-5">
                             <em>
                                 <strong>Email:</strong>
-                                <br />
+                                <br>
                                 <strong><a href="mailto:info@poppizza.pl">info@poppizza.pl</a></strong>
                             </em>
                         </p>
                         <p class="address mb-0">
                             <em>Zapraszamy do składania zamówień pod numerem telefonu:</em>
-                            <br />
+                            <br>
                             <strong class="fw-bold">12 345 67 89</strong>
                         </p>
                     </div>
