@@ -1,2 +1,2 @@
 # Studia
-Studies
+Code I wrote at university.
