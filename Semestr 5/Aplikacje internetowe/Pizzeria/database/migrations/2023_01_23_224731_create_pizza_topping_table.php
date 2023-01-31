@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('pizza_id')->references('id')
                     ->on('pizzas')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('topping_id')->references('id')
-                    ->on('topping')->onUpdate('cascade')->onDelete('cascade');
+                    ->on('toppings')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

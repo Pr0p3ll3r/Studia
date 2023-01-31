@@ -10,8 +10,12 @@ class Topping extends Model
 {
     use HasFactory;
     
+    protected $fillable = [
+        'name'
+    ];
+    
     public function pizzas()
     {
-        return $this->belongsToMany("App\Models\Pizza");
+        return $this->hasMany("App\Models\Pizza");
     }
 }

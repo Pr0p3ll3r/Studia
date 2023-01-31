@@ -22,6 +22,6 @@ class Pizza extends Model
     
     public function cart()
     {
-        return $this->belongsTo('App\Models\OrderItem');
+        return $this->hasOne('App\Models\OrderItem');
     }
 }

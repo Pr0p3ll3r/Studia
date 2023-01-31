@@ -19,8 +19,8 @@
                     @if(session('cart'))
                     <a class="btn btn-outline-light" href="{{ url('cart') }}">
                     @else
-                    <a class="btn btn-outline-light disabled" href="{{ url('cart') }}">
-                    @endif
+                        <a class="btn btn-outline-light disabled" href="{{ url('cart') }}">
+                            @endif
                             <b class="bi-cart-fill me-1 text-white marg"></b>                           
                             <span class="badge bg-dark text-white ms-1 rounded-pill">{{ \App\Http\Controllers\CartController::getTotalPrice() }} zł</span>                                             
                         </a>

@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_address', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('street');
-            $table->string('houseNumber');
-            $table->string('apartmentNumber');  
+            $table->unsignedDouble('totalPrice', 8, 2);
+            $table->enum('payment', ['gotowka', 'karta','online'])->default('gotowka');
+            $table->string('comment')->nullable();
+            $table->timestamps();
             $table->foreign('user_id')->references('id')
                     ->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_address');
+        Schema::dropIfExists('orders');
     }
 };

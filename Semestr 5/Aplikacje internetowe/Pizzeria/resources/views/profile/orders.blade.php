@@ -12,31 +12,34 @@
                         @endif
                         @foreach($orders as $order)
                         <table class="table table-primary">
-                            <tr> 
-                                <td colspan="2">Data zamówienia: {{ $order->created_at }}</td>
-                                <td colspan="3">Komentarz : {{ $order->comment }}</td> 
+                            <tr>
+                                <td colspan="2">Adres: {{ $order->address->street }} {{ $order->address->houseNumber }} {{ $order->address->apartmentNumber }}</td>   
+                                <td colspan="2">Data zamówienia: {{ $order->created_at }}</td>                            
                             </tr>
-                            <tr> 
-                                <td colspan="5" class="text-center">Zawartość</td>                      
+                            <tr>
+                                <td colspan="4">Komentarz: {{ $order->comment }}</td> 
+                            </tr>
+                            <tr>
+                                <td colspan="4">Zawartość</td>                      
                             </tr> 
-                            <tr> 
-                                <td colspan="1">Ilość</td> 
-                                <td colspan="1">Nazwa</td>
-                                <td colspan="1">Wielkość</td> 
-                                <td colspan="2">Cena</td> 
+                            <tr>
+                                <td>Ilość</td> 
+                                <td>Nazwa</td>
+                                <td>Wielkość</td> 
+                                <td>Cena</td> 
                             </tr>
-                            <tr> 
-                                @foreach($order->items as $item)
-                                <td class="col-md-1">{{ $item->quantity }}x</td> 
-                                <td class="col-md-3">{{ $item->pizza->name }}</td>
-                                <td class="col-md-3">{{ $item->size }}cm</td> 
-                                <td class="col-md-1">{{ $item->price }}zł</td> 
-                                @endforeach
+                             @foreach($order->items as $item)
+                            <tr>
+                                <td>{{ $item->quantity }}x</td> 
+                                <td>{{ $item->pizza->name }}</td>
+                                <td>{{ $item->size }}cm</td> 
+                                <td>{{ $item->price }}zł</td>                
                             </tr>
-                            <tr> 
-                                <td colspan="6" class="text-center">
+                            @endforeach
+                            <tr>
+                                <td colspan="4">
                                     <h4>
-                                        <span class="section-heading-lower fw-bold">Razem {{$order->totalPrice}} zł</span>
+                                        <span class="section-heading-lower fw-bold">Razem {{ $order->totalPrice }} zł</span>
                                     </h4>
                                 </td>
                             </tr>

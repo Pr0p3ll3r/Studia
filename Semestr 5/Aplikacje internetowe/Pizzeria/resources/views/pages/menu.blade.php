@@ -15,11 +15,11 @@
                                 <h5 class="fw-bolder">{{$pizza->name}}</h5>
                                 <!-- Pizza toppings-->
                                 @if($pizza->toppings->isEmpty())
-                                    sos, ser, przyprawy
+                                sos, ser, przyprawy
                                 @else
-                                   sos, ser, przyprawy,
+                                sos, ser, przyprawy,
                                 @endif
-                                
+
                                 @foreach ($pizza->toppings as $topping)                                    
                                 @if ($loop->last)
                                 {{$topping->name}}
@@ -34,10 +34,7 @@
                             <option value="42">42cm - {{$pizza->priceFor42}}zł</option>
                         </select><br>
                         <input type="hidden" value="{{ $pizza->id }}" name="id">
-                        <!-- Pizza actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button type="submit" class="btn btn-primary">Dodaj do koszyka</button></div>
-                        </div>                      
+                        <div class="text-center"><button type="submit" class="btn btn-primary">Dodaj do koszyka</button></div>         
                     </div>
                 </form>
                 @endforeach

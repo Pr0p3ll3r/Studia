@@ -83,20 +83,29 @@
                                     </tr>
                                     <tr>
                                         <td>
+                                            <?php 
+                                            $address = DB::table('order_addresses')
+                                                    ->join('orders', 'order_addresses.order_id', '=', 'orders.id')
+                                                    ->join('users', 'orders.user_id', '=', 'users.id')
+                                                    ->where('users.id', Auth::id())
+                                                    ->select('street', 'houseNumber', 'apartmentNumber')
+                                                    ->latest('orders.created_at')                                            
+                                                    ->first();
+                                            ?>                              
                                     <x-input-label for="street" :value="__('Street')" />
-                                    <x-text-input id="street" name="street" type="text" class="mt-1 block w-full form-control" :value="old('street')" 
+                                    <x-text-input id="street" name="street" type="text" class="mt-1 block w-full form-control" :value="old('street', $address->street ?? '')" 
                                                   pattern="[A-Za-z ]+" maxlength="255" required autocomplete="street" />
                                     <x-input-error class="mt-2" :messages="$errors->get('street')" />
                                     </td>
                                     <td>
                                     <x-input-label for="houseNumber" :value="__('House Number')" />
-                                    <x-text-input id="houseNumber" name="houseNumber" type="text" class="mt-1 block w-full form-control" :value="old('houseNumber')" 
+                                    <x-text-input id="houseNumber" name="houseNumber" type="text" class="mt-1 block w-full form-control" :value="old('houseNumber', $address->houseNumber ?? '')" 
                                                   pattern="[A-Za-z0-9]+" maxlength="5" required autocomplete="houseNumber" />
                                     <x-input-error class="mt-2" :messages="$errors->get('houseNumber')" />
                                     </td>
                                     <td>
                                     <x-input-label for="apartmentNumber" :value="__('Apartment Number')" />
-                                    <x-text-input id="apartmentNumber" name="apartmentNumber" type="text" class="mt-1 block w-full form-control" :value="old('apartmentNumber')" 
+                                    <x-text-input id="apartmentNumber" name="apartmentNumber" type="text" class="mt-1 block w-full form-control" :value="old('apartmentNumber', $address->apartmentNumber ?? '')" 
                                                   pattern="[A-Za-z0-9]+" maxlength="5" autocomplete="apartmentNumber" />
                                     </td>
                                     </tr>                                                            

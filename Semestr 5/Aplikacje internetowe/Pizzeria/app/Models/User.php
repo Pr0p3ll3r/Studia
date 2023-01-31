@@ -21,7 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'phone',
-        'password',
+        'password'
     ];
 
     /**
@@ -46,10 +46,5 @@ class User extends Authenticatable
     public function order()
     {
         return $this->hasMany('App\Models\Order');
-    }
-    
-    public function address()
-    {
-        return $this->hasOne('App\Models\Address');
     }
 }
