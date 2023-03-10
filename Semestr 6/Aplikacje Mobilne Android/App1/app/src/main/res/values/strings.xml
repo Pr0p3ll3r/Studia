@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">App1</string>
+    <string name="imie_tv">Imię:</string>
+    <string name="imie_et">Wpisz imię</string>
+    <string name="imie_et_err">Imię powinno być wprowadzone</string>
+    <string name="nazwisko_tv">Nazwisko:</string>
+    <string name="nazwisko_et">Wpisz nazwisko</string>
+    <string name="nazwisko_et_err">Nazwisko powinno być wprowadzone</string>
+</resources>
