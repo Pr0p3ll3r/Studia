@@ -6,4 +6,8 @@
     <string name="nazwisko_tv">Nazwisko:</string>
     <string name="nazwisko_et">Wpisz nazwisko</string>
     <string name="nazwisko_et_err">Nazwisko powinno być wprowadzone</string>
+    <string name="liczba_ocen_tv">Liczba ocen:</string>
+    <string name="liczba_ocen_et">Wpisz liczbę ocen (5-15)</string>
+    <string name="liczba_ocen_et_err">Liczba ocen musi być z zakresu 5-15</string>
+    <string name="potwierdz_bt">OCENY</string>
 </resources>
