@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical">
@@ -29,12 +30,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nazwisko_tv"/>
+
         <EditText
             android:id="@+id/nazwisko_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nazwisko_et"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,12 +53,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/liczba_ocen_et"
-            android:inputType="number"/>
+            android:inputType="number"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
     <Button
         android:id="@+id/potwierdz_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/potwierdz_bt"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/srednia_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/srednia_tv"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/srednia_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:visibility="gone"/>
 </LinearLayout>

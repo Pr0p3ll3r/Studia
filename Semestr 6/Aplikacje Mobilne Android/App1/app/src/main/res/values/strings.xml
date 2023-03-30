@@ -7,7 +7,31 @@
     <string name="nazwisko_et">Wpisz nazwisko</string>
     <string name="nazwisko_et_err">Nazwisko powinno być wprowadzone</string>
     <string name="liczba_ocen_tv">Liczba ocen:</string>
-    <string name="liczba_ocen_et">Wpisz liczbę ocen (5-15)</string>
-    <string name="liczba_ocen_et_err">Liczba ocen musi być z zakresu 5-15</string>
+    <string name="liczba_ocen_et">Wpisz liczbę ocen (5–15)</string>
+    <string name="liczba_ocen_et_err">Liczba ocen musi być z zakresu 5–15</string>
     <string name="potwierdz_bt">OCENY</string>
+    <string name="nazwa_przedmiotu_tv">Przedmiot</string>
+    <string name="oblicz_srednia_bt">Oblicz średnią</string>
+    <string name="srednia_tv">Twoja srednia to %.2f</string>
+    <string name="srednia_sukces_bt">Super :)</string>
+    <string name="srednia_powtorka_bt">Tym razem mi nie poszło</string>
+    <string name="sukces">Gratulacje! Otrzymujesz zaliczenie!</string>
+    <string name="powtorka">Wysyłam podanie o zaliczenie warunkowe</string>
+    <string-array name="nazwy_przedmiotow_tab">
+        <item>Fiz.</item>
+        <item>Mat.</item>
+        <item>El.</item>
+        <item>TC</item>
+        <item>PP</item>
+        <item>Java</item>
+        <item>TPI</item>
+        <item>C</item>
+        <item>C++</item>
+        <item>ASD</item>
+        <item>MN</item>
+        <item>PRiR</item>
+        <item>ISM</item>
+        <item>PN</item>
+        <item>NI</item>
+    </string-array>
 </resources>
