@@ -21,7 +21,6 @@ import java.text.Format;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
-
     private boolean isImieEtOk;
     private boolean isNazwiskoEtOk;
     private boolean isLiczbaOcenEtOk;
@@ -87,6 +86,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putBoolean("isImieEtOk", this.isImieEtOk);
+        outState.putBoolean("isNazwiskoEtOk", this.isNazwiskoEtOk);
+        outState.putBoolean("isLiczbaOcenEtOk", this.isLiczbaOcenEtOk);
+        outState.putFloat("srednia", this.srednia);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        this.isImieEtOk = savedInstanceState.getBoolean("isImieEtOk");
+        this.isNazwiskoEtOk = savedInstanceState.getBoolean("isNazwiskoEtOk");
+        this.isLiczbaOcenEtOk = savedInstanceState.getBoolean("isLiczbaOcenEtOk");
+        this.srednia = savedInstanceState.getFloat("srednia");
+        sprawdzPotwierdzBtWidoczny();
+        pokazSrednia();
+    }
+
     private void obliczSrednia(ActivityResult result) {
         if(result.getResultCode()==RESULT_OK) {
             Bundle pojemnik = result.getData().getExtras();
@@ -96,16 +115,21 @@ public class MainActivity extends AppCompatActivity {
                 oceny[i] = pojemnik.getInt(OcenyActivity.OCENA_NR_KEY + i);
             }
             this.srednia = (float)Arrays.stream(oceny).sum()/(float)iloscPrzedmiotow;
-            this.sredniaTv.setVisibility(View.VISIBLE);
-            this.sredniaTv.setText(String.format(getString(R.string.srednia_tv), this.srednia));
-            if(this.srednia >= 3) {
-                this.sredniaBt.setText(R.string.srednia_sukces_bt);
-            }
-            else {
-                this.sredniaBt.setText(R.string.srednia_powtorka_bt);
-            }
-            this.sredniaBt.setVisibility(View.VISIBLE);
+            pokazSrednia();
         }
+    }
+
+    private void pokazSrednia() {
+        if(srednia == 0) return;
+        this.sredniaTv.setVisibility(View.VISIBLE);
+        this.sredniaTv.setText(String.format(getString(R.string.srednia_tv), this.srednia));
+        if(this.srednia >= 3) {
+            this.sredniaBt.setText(R.string.srednia_sukces_bt);
+        }
+        else {
+            this.sredniaBt.setText(R.string.srednia_powtorka_bt);
+        }
+        this.sredniaBt.setVisibility(View.VISIBLE);
     }
 
     private boolean sprawdzEt(EditText editText, String info) {

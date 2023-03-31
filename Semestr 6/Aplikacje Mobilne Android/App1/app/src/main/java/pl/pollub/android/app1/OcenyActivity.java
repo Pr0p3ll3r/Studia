@@ -1,5 +1,6 @@
 package pl.pollub.android.app1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,6 +40,21 @@ public class OcenyActivity extends AppCompatActivity {
         this.obliczSredniaBt.setOnClickListener(v -> {
             obliczSrednia();
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        spakujDane(outState);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        //int iloscPrzedmiotow = savedInstanceState.getInt(this.ILOSC_PRZEDMIOTOW_KEY);
+        for(int i=0;i<listaPrzedmiotow.size();i++) {
+            this.listaPrzedmiotow.get(i).setOcena(savedInstanceState.getInt(this.OCENA_NR_KEY+i));
+        }
     }
 
     private void obliczSrednia() {

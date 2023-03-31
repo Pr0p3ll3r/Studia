@@ -1,76 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/imie_tv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/imie_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/imie_tv"/>
-        <EditText
-            android:id="@+id/imie_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/imie_et"
-            android:inputType="textPersonName"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_marginTop="14dp"
+        android:text="@string/imie_tv"
+        app:layout_constraintEnd_toStartOf="@+id/imie_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/imie_et"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/nazwisko_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nazwisko_tv"/>
-
-        <EditText
-            android:id="@+id/nazwisko_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/nazwisko_et"
-            android:inputType="textPersonName"
-            tools:ignore="TouchTargetSizeCheck" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:hint="@string/imie_et"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/imie_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imie_tv" />
+    <TextView
+        android:id="@+id/nazwisko_tv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/liczba_ocen_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/liczba_ocen_tv"/>
-        <EditText
-            android:id="@+id/liczba_ocen_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/liczba_ocen_et"
-            android:inputType="number"
-            tools:ignore="TouchTargetSizeCheck" />
-    </LinearLayout>
+        android:text="@string/nazwisko_tv"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nazwisko_et"
+        app:layout_constraintEnd_toStartOf="@+id/nazwisko_et"
+        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:id="@+id/nazwisko_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nazwisko_et"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nazwisko_tv"
+        app:layout_constraintTop_toBottomOf="@+id/imie_et"
+        tools:ignore="TouchTargetSizeCheck" />
+    <TextView
+        android:id="@+id/liczba_ocen_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/liczba_ocen_tv"
+        app:layout_constraintBaseline_toBaselineOf="@+id/liczba_ocen_et"
+        app:layout_constraintEnd_toStartOf="@+id/liczba_ocen_et"
+        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:id="@+id/liczba_ocen_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/liczba_ocen_et"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/liczba_ocen_tv"
+        app:layout_constraintTop_toBottomOf="@+id/nazwisko_et"
+        tools:ignore="TouchTargetSizeCheck" />
     <Button
         android:id="@+id/potwierdz_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/potwierdz_bt"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/liczba_ocen_tv" />
     <TextView
         android:id="@+id/srednia_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/srednia_tv"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/potwierdz_bt" />
     <Button
         android:id="@+id/srednia_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
-</LinearLayout>
+        android:visibility="gone"
+        android:text="@string/srednia_sukces_bt"
+        app:layout_constraintTop_toBottomOf="@+id/srednia_tv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

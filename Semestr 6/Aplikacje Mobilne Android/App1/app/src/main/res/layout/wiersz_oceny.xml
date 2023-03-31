@@ -1,36 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<TextView
-    android:id="@+id/nazwa_przedmiotu_tv"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/nazwa_przedmiotu_tv"/>
+    <TextView
+        android:id="@+id/nazwa_przedmiotu_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nazwa_przedmiotu_tv"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <RadioGroup
         android:id="@+id/ocena_przedmiotu_rg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nazwa_przedmiotu_tv"
+        app:layout_constraintStart_toEndOf="@+id/nazwa_przedmiotu_tv" >
         <RadioButton
             android:id="@+id/ocena_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"/>
+            android:text="2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ocena_3"
+            app:layout_constraintStart_toEndOf="@+id/nazwa_przedmiotu_tv" />
         <RadioButton
             android:id="@+id/ocena_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3"/>
+            android:text="3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ocena_2"
+            app:layout_constraintStart_toEndOf="@+id/ocena_2" />
         <RadioButton
             android:id="@+id/ocena_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4"/>
+            android:text="4"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ocena_3"
+            app:layout_constraintStart_toEndOf="@+id/ocena_3" />
         <RadioButton
             android:id="@+id/ocena_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5"/>
+            android:text="5"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ocena_4"
+            app:layout_constraintStart_toEndOf="@+id/ocena_4" />
     </RadioGroup>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
