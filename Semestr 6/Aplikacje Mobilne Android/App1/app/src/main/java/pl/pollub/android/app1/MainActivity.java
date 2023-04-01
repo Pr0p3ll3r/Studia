@@ -120,16 +120,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void pokazSrednia() {
-        if(srednia == 0) return;
-        this.sredniaTv.setVisibility(View.VISIBLE);
-        this.sredniaTv.setText(String.format(getString(R.string.srednia_tv), this.srednia));
-        if(this.srednia >= 3) {
-            this.sredniaBt.setText(R.string.srednia_sukces_bt);
+        if (this.srednia == 0) {
+            this.sredniaTv.setVisibility(View.GONE);
+            this.sredniaBt.setVisibility(View.GONE);
         }
         else {
-            this.sredniaBt.setText(R.string.srednia_powtorka_bt);
+            this.sredniaTv.setText(String.format(getString(R.string.srednia_tv), this.srednia));
+            if(this.srednia >= 3) {
+                this.sredniaBt.setText(R.string.srednia_sukces_bt);
+            }
+            else {
+                this.sredniaBt.setText(R.string.srednia_powtorka_bt);
+            }
+            this.sredniaBt.setVisibility(View.VISIBLE);
+            this.sredniaTv.setVisibility(View.VISIBLE);
         }
-        this.sredniaBt.setVisibility(View.VISIBLE);
     }
 
     private boolean sprawdzEt(EditText editText, String info) {
