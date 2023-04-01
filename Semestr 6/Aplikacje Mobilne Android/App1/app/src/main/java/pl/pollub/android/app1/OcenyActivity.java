@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 
 import java.util.ArrayList;
@@ -43,6 +44,12 @@ public class OcenyActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        this.finish();
+        return true;
+    }
+
+    @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         spakujDane(outState);
         super.onSaveInstanceState(outState);
@@ -51,7 +58,6 @@ public class OcenyActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        //int iloscPrzedmiotow = savedInstanceState.getInt(this.ILOSC_PRZEDMIOTOW_KEY);
         for(int i=0;i<listaPrzedmiotow.size();i++) {
             this.listaPrzedmiotow.get(i).setOcena(savedInstanceState.getInt(this.OCENA_NR_KEY+i));
         }
