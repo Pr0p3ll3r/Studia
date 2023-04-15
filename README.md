@@ -1,2 +1,2 @@
 # Studia
-Code I wrote at university.
+This folder contains code I wrote during my studies.
