@@ -21,7 +21,7 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneViewHolder> {
     @NonNull
     @Override
     public PhoneViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = parent.getRootView();
+        View view = this.inflater.inflate(R.layout.phone_info, parent, false);
         return new PhoneViewHolder(view);
     }
 
