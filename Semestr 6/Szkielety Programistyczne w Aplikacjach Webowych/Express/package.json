@@ -9,8 +9,14 @@
   "author": "Jan",
   "dependencies": {
     "express": "^4.18.2",
-    "express-validator": "^7.0.0",
-    "nodemon": "^2.0.22"
+    "express-react-views": "^0.11.0",
+    "express-validator": "^7.0.1",
+    "hbs": "^4.2.0",
+    "install": "^0.13.0",
+    "nodemon": "^2.0.22",
+    "npm": "^9.6.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "scripts": {
     "zad08": "nodemon zad08.js",
@@ -18,6 +24,9 @@
     "zad10": "nodemon zad10.js",
     "zad11": "nodemon zad11.js",
     "zad12": "nodemon zad12.js",
-    "zad13": "nodemon zad13.js"
+    "zad13": "nodemon zad13.js",
+    "zad14": "nodemon zad14.js",
+    "zad15": "nodemon zad15.js",
+    "server": "nodemon server.js"
   }
 }
