@@ -7,4 +7,5 @@
     <string name="website_bt">Go to website</string>
     <string name="cancel_bt">Cancel</string>
     <string name="save_bt">Save</string>
+    <string name="clear">Clear all data</string>
 </resources>

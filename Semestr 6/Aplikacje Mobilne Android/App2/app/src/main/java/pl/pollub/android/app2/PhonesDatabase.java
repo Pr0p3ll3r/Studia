@@ -13,33 +13,27 @@ import java.util.concurrent.Executors;
 
 @Database(entities = {Phone.class}, version = 1, exportSchema = false)
 public abstract class PhonesDatabase extends RoomDatabase
-{
-    public abstract PhoneDao phoneDao();
+{    public abstract PhoneDao phoneDao();
     private static volatile PhonesDatabase INSTANCE;
     static PhonesDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (PhonesDatabase.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), PhonesDatabase.class, "nazwa_bazy")
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),PhonesDatabase.class,"phones_database")
                             .addCallback(sRoomDatabaseCallback)
                             .fallbackToDestructiveMigration()
-                            .build();
-                }
-            }
-        }
-        return INSTANCE;
+                            .build();}}}  return INSTANCE;
     }
     private static final int NUMBER_OF_THREADS = 4;
-    static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
-    private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
-
+    static final ExecutorService databaseWriteExecutor =  Executors.newFixedThreadPool(NUMBER_OF_THREADS);
+    private static RoomDatabase.Callback  sRoomDatabaseCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
             databaseWriteExecutor.execute(() -> {
                 PhoneDao dao = INSTANCE.phoneDao();
-                Phone[] phones = {new Phone("google", "Pixel 6a", "13", "google.com")};
-                for(Phone p : phones) {
+                Phone[] phones = {new Phone("google","Pixel 6a","13","google.com")};
+                for(Phone p : phones){
                     dao.insert(p);
                 }
             });

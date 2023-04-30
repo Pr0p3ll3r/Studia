@@ -13,7 +13,7 @@
             android:id="@+id/manufacturer_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="2"
+            android:layout_span="1"
             android:text="@string/manufacturer_tv">
         </TextView>
         <EditText
@@ -32,7 +32,7 @@
             android:id="@+id/model_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="2"
+            android:layout_span="1"
             android:text="@string/model_tv">
         </TextView>
         <EditText
@@ -51,7 +51,7 @@
             android:id="@+id/android_version_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="2"
+            android:layout_span="1"
             android:text="@string/android_version_tv">
         </TextView>
         <EditText
@@ -70,7 +70,7 @@
             android:id="@+id/website_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="2"
+            android:layout_span="1"
             android:text="@string/website_tv">
         </TextView>
         <EditText
