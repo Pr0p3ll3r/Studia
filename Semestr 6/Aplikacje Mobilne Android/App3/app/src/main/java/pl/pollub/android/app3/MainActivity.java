@@ -15,6 +15,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class MainActivity extends AppCompatActivity {
 
     private Button pobierzInfoBt;
+    private Button pobierzPlikBt;
     private TextView adres;
     private TextView rozmiarPliku;
     private TextView typPliku;
@@ -28,8 +29,12 @@ public class MainActivity extends AppCompatActivity {
         this.rozmiarPliku = findViewById(R.id.file_size_value_tv);
         this.typPliku = findViewById(R.id.file_type_value_tv);
         this.pobierzInfoBt.setOnClickListener(view -> pobierzInfo());
+        this.pobierzPlikBt = findViewById(R.id.download_file_bt);
+        this.pobierzPlikBt.setOnClickListener((view -> pobierzPlik()));
     }
-
+    private void pobierzPlik() {
+        DownloadService.rozpocznijPobieraniePliku(this, this.adres.getText().toString());
+    }
     private void pobierzInfo() {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         executorService.execute(() -> {
