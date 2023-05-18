@@ -7,4 +7,5 @@
     <string name="download_file_bt">POBIERZ PLIK</string>
     <string name="downloaded_tv">Pobrano bajtów:</string>
     <string name="address_et">https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.4.36.tar.xz</string>
+    <string name="powiadomienie_tytul">Pobieranie pliku</string>
 </resources>
