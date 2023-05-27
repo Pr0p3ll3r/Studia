@@ -9,37 +9,30 @@ import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
 public class DownloadService extends IntentService {
-
     private static final String AKCJA_POBIERZ_PLIK = "AKCJA_POBIERZ_PLIK";
-
     private static final String PARAMETR1_KEY = "ADRES";
-
     private static final int ID_POWIADOMIENIA = 1;
+    public final static String POWIADOMIENIE = "DownloadService.powiadomienie";
+    public final static String PROGRESS_INFO_KEY = "PROGRESS_INFO_KEY";
     private static final int ROZMIAR_BLOKU = 32767;
-    private static final String ID_KANALU = "KANAL";
+    private static final String ID_KANALU = "DownloadService.kanal";
     private NotificationManager notificationManager;
-
-    private ProgressBar pobieranieSlider;
-    private int pobranychBajtow;
-    private int wielkoscPliku;
-
+    private ProgressInfo progressInfo = new ProgressInfo();
     public DownloadService() {
         super("DownloadService");
     }
@@ -70,7 +63,8 @@ public class DownloadService extends IntentService {
         try {
             URL url = new URL(adresPliku);
             polaczenie = (HttpsURLConnection) url.openConnection();
-            this.wielkoscPliku = polaczenie.getContentLength();
+            this.progressInfo = new ProgressInfo();
+            this.progressInfo.setFileSize(polaczenie.getContentLength());
             File plikRoboczy = new File(url.getFile());
             File plikWyjsciowy = new File(getBaseContext().getFilesDir().getPath() + File.separator + plikRoboczy.getName());
             if (plikWyjsciowy.exists()) {
@@ -81,17 +75,20 @@ public class DownloadService extends IntentService {
             byte bufor[] = new byte[ROZMIAR_BLOKU];
             int pobrano = czytnik.read(bufor, 0, ROZMIAR_BLOKU);
             Handler handler = new Handler(Looper.getMainLooper());
+            this.progressInfo.setDownloadStatus(0);
             while (pobrano != -1)
             {
                 strumienDoPliku.write(bufor, 0, pobrano);
-                this.pobranychBajtow += pobrano;
+                this.progressInfo.increaseDownloadBytes(pobrano);
                 this.notificationManager.notify(ID_POWIADOMIENIA, utworzPowiadomienie());
-                Log.d("DownloadService", "Pobrano bajtów: " + pobranychBajtow);
+                wyslijBroadcast();
+                Log.d("DownloadService", "Pobrano bajtów: " + this.progressInfo.getDownloadBytes());
                 pobrano = czytnik.read(bufor, 0, ROZMIAR_BLOKU);
             }
             Log.d("DownloadService","Pobrano plik");
         } catch (Exception e) {
             e.printStackTrace();
+            this.progressInfo.setDownloadStatus(2);
         } finally {
             if (strumienDoPliku != null)
             {
@@ -105,6 +102,7 @@ public class DownloadService extends IntentService {
             {
                 polaczenie.disconnect();
             }
+            this.progressInfo.setDownloadStatus(1);
         }
     }
 
@@ -118,20 +116,19 @@ public class DownloadService extends IntentService {
     }
 
     private Notification utworzPowiadomienie() {
-        Intent intencjaPowiadomienia = new Intent(this, DownloadService.class);
-        //intencjaPowiadomienia.putExtra()
+        Intent intencjaPowiadomienia = new Intent(this, MainActivity.class);
         TaskStackBuilder budowniczyStosu = TaskStackBuilder.create(this);
         budowniczyStosu.addParentStack(MainActivity.class);
         budowniczyStosu.addNextIntent(intencjaPowiadomienia);
         PendingIntent intencjaOczekujaca = budowniczyStosu.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
         Notification.Builder budowniczyPowiadomien = new Notification.Builder(this);
         budowniczyPowiadomien.setContentTitle(getString(R.string.powiadomienie_tytul))
-                .setProgress(this.wielkoscPliku, this.pobranychBajtow, false)
+                .setProgress(100, this.progressInfo.progressValue(), false)
                 .setContentIntent(intencjaOczekujaca)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setWhen(System.currentTimeMillis())
                 .setPriority(Notification.PRIORITY_HIGH);
-        if (1==1) {
+        if (!this.progressInfo.isDownloadComplete()) {
             budowniczyPowiadomien.setOngoing(false);
         } else {
             budowniczyPowiadomien.setOngoing(true);
@@ -142,5 +139,11 @@ public class DownloadService extends IntentService {
         }
 
         return budowniczyPowiadomien.build();
+    }
+
+    private void wyslijBroadcast() {
+        Intent zamiar = new Intent(POWIADOMIENIE);
+        zamiar.putExtra(PROGRESS_INFO_KEY, this.progressInfo);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(zamiar);
     }
 }
