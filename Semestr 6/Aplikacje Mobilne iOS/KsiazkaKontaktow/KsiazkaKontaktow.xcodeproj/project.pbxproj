@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BB06BF42A23DEE500128171 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB06BF32A23DEE500128171 /* SearchBar.swift */; };
+		3BB06BF82A24065C00128171 /* ContactGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB06BF72A24065C00128171 /* ContactGroupView.swift */; };
+		3BB06BFA2A240A6300128171 /* AddContactGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB06BF92A240A6300128171 /* AddContactGroupView.swift */; };
+		3BDA091E2A21A23D004CB201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA091D2A21A23D004CB201 /* AppDelegate.swift */; };
+		3BDA09202A21A23D004CB201 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA091F2A21A23D004CB201 /* SceneDelegate.swift */; };
+		3BDA09232A21A23D004CB201 /* KsiazkaKontaktow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA09212A21A23D004CB201 /* KsiazkaKontaktow.xcdatamodeld */; };
+		3BDA09252A21A23D004CB201 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA09242A21A23D004CB201 /* ContentView.swift */; };
+		3BDA09272A21A241004CB201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDA09262A21A241004CB201 /* Assets.xcassets */; };
+		3BDA092A2A21A241004CB201 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDA09292A21A241004CB201 /* Preview Assets.xcassets */; };
+		3BDA092D2A21A241004CB201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDA092B2A21A241004CB201 /* LaunchScreen.storyboard */; };
+		3BDA09382A226343004CB201 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA09342A226343004CB201 /* Contact+CoreDataClass.swift */; };
+		3BDA09392A226343004CB201 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA09352A226343004CB201 /* Contact+CoreDataProperties.swift */; };
+		3BDA093A2A226343004CB201 /* ContactGroup+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA09362A226343004CB201 /* ContactGroup+CoreDataClass.swift */; };
+		3BDA093B2A226343004CB201 /* ContactGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA09372A226343004CB201 /* ContactGroup+CoreDataProperties.swift */; };
+		3BDA093D2A22CA94004CB201 /* EditContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA093C2A22CA94004CB201 /* EditContactView.swift */; };
+		3BDA09432A22D6A2004CB201 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA09422A22D6A2004CB201 /* AddContactView.swift */; };
+		3BDA09452A22ECBD004CB201 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA09442A22ECBD004CB201 /* ImagePicker.swift */; };
+		3BDA09472A22FB72004CB201 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA09462A22FB72004CB201 /* ContactView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BB06BF32A23DEE500128171 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		3BB06BF72A24065C00128171 /* ContactGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactGroupView.swift; sourceTree = "<group>"; };
+		3BB06BF92A240A6300128171 /* AddContactGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactGroupView.swift; sourceTree = "<group>"; };
+		3BDA091A2A21A23D004CB201 /* KsiazkaKontaktow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KsiazkaKontaktow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BDA091D2A21A23D004CB201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BDA091F2A21A23D004CB201 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3BDA09222A21A23D004CB201 /* KsiazkaKontaktow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KsiazkaKontaktow.xcdatamodel; sourceTree = "<group>"; };
+		3BDA09242A21A23D004CB201 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3BDA09262A21A241004CB201 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BDA09292A21A241004CB201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3BDA092C2A21A241004CB201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BDA092E2A21A241004CB201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BDA09342A226343004CB201 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3BDA09352A226343004CB201 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3BDA09362A226343004CB201 /* ContactGroup+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactGroup+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3BDA09372A226343004CB201 /* ContactGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3BDA093C2A22CA94004CB201 /* EditContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactView.swift; sourceTree = "<group>"; };
+		3BDA09422A22D6A2004CB201 /* AddContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		3BDA09442A22ECBD004CB201 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		3BDA09462A22FB72004CB201 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BDA09172A21A23D004CB201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BDA09112A21A23D004CB201 = {
+			isa = PBXGroup;
+			children = (
+				3BDA091C2A21A23D004CB201 /* KsiazkaKontaktow */,
+				3BDA091B2A21A23D004CB201 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BDA091B2A21A23D004CB201 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BDA091A2A21A23D004CB201 /* KsiazkaKontaktow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BDA091C2A21A23D004CB201 /* KsiazkaKontaktow */ = {
+			isa = PBXGroup;
+			children = (
+				3BDA09342A226343004CB201 /* Contact+CoreDataClass.swift */,
+				3BDA09352A226343004CB201 /* Contact+CoreDataProperties.swift */,
+				3BDA09362A226343004CB201 /* ContactGroup+CoreDataClass.swift */,
+				3BDA09372A226343004CB201 /* ContactGroup+CoreDataProperties.swift */,
+				3BDA091D2A21A23D004CB201 /* AppDelegate.swift */,
+				3BDA091F2A21A23D004CB201 /* SceneDelegate.swift */,
+				3BDA09242A21A23D004CB201 /* ContentView.swift */,
+				3BDA09262A21A241004CB201 /* Assets.xcassets */,
+				3BDA092B2A21A241004CB201 /* LaunchScreen.storyboard */,
+				3BDA092E2A21A241004CB201 /* Info.plist */,
+				3BDA09212A21A23D004CB201 /* KsiazkaKontaktow.xcdatamodeld */,
+				3BDA09282A21A241004CB201 /* Preview Content */,
+				3BDA093C2A22CA94004CB201 /* EditContactView.swift */,
+				3BDA09422A22D6A2004CB201 /* AddContactView.swift */,
+				3BDA09442A22ECBD004CB201 /* ImagePicker.swift */,
+				3BDA09462A22FB72004CB201 /* ContactView.swift */,
+				3BB06BF32A23DEE500128171 /* SearchBar.swift */,
+				3BB06BF72A24065C00128171 /* ContactGroupView.swift */,
+				3BB06BF92A240A6300128171 /* AddContactGroupView.swift */,
+			);
+			path = KsiazkaKontaktow;
+			sourceTree = "<group>";
+		};
+		3BDA09282A21A241004CB201 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3BDA09292A21A241004CB201 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BDA09192A21A23D004CB201 /* KsiazkaKontaktow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BDA09312A21A241004CB201 /* Build configuration list for PBXNativeTarget "KsiazkaKontaktow" */;
+			buildPhases = (
+				3BDA09162A21A23D004CB201 /* Sources */,
+				3BDA09172A21A23D004CB201 /* Frameworks */,
+				3BDA09182A21A23D004CB201 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KsiazkaKontaktow;
+			productName = KsiazkaKontaktow;
+			productReference = 3BDA091A2A21A23D004CB201 /* KsiazkaKontaktow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BDA09122A21A23D004CB201 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Jakub Dudek";
+				TargetAttributes = {
+					3BDA09192A21A23D004CB201 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 3BDA09152A21A23D004CB201 /* Build configuration list for PBXProject "KsiazkaKontaktow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BDA09112A21A23D004CB201;
+			productRefGroup = 3BDA091B2A21A23D004CB201 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BDA09192A21A23D004CB201 /* KsiazkaKontaktow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BDA09182A21A23D004CB201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BDA092D2A21A241004CB201 /* LaunchScreen.storyboard in Resources */,
+				3BDA092A2A21A241004CB201 /* Preview Assets.xcassets in Resources */,
+				3BDA09272A21A241004CB201 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BDA09162A21A23D004CB201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB06BF42A23DEE500128171 /* SearchBar.swift in Sources */,
+				3BDA09392A226343004CB201 /* Contact+CoreDataProperties.swift in Sources */,
+				3BDA09432A22D6A2004CB201 /* AddContactView.swift in Sources */,
+				3BDA09232A21A23D004CB201 /* KsiazkaKontaktow.xcdatamodeld in Sources */,
+				3BDA093D2A22CA94004CB201 /* EditContactView.swift in Sources */,
+				3BB06BF82A24065C00128171 /* ContactGroupView.swift in Sources */,
+				3BDA091E2A21A23D004CB201 /* AppDelegate.swift in Sources */,
+				3BDA09252A21A23D004CB201 /* ContentView.swift in Sources */,
+				3BDA093B2A226343004CB201 /* ContactGroup+CoreDataProperties.swift in Sources */,
+				3BDA09472A22FB72004CB201 /* ContactView.swift in Sources */,
+				3BDA09452A22ECBD004CB201 /* ImagePicker.swift in Sources */,
+				3BB06BFA2A240A6300128171 /* AddContactGroupView.swift in Sources */,
+				3BDA09202A21A23D004CB201 /* SceneDelegate.swift in Sources */,
+				3BDA093A2A226343004CB201 /* ContactGroup+CoreDataClass.swift in Sources */,
+				3BDA09382A226343004CB201 /* Contact+CoreDataClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BDA092B2A21A241004CB201 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BDA092C2A21A241004CB201 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BDA092F2A21A241004CB201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3BDA09302A21A241004CB201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BDA09322A21A241004CB201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"KsiazkaKontaktow/Preview Content\"";
+				DEVELOPMENT_TEAM = FBUTNFQ426;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KsiazkaKontaktow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jd.KsiazkaKontaktow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BDA09332A21A241004CB201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"KsiazkaKontaktow/Preview Content\"";
+				DEVELOPMENT_TEAM = FBUTNFQ426;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KsiazkaKontaktow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jd.KsiazkaKontaktow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BDA09152A21A23D004CB201 /* Build configuration list for PBXProject "KsiazkaKontaktow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BDA092F2A21A241004CB201 /* Debug */,
+				3BDA09302A21A241004CB201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BDA09312A21A241004CB201 /* Build configuration list for PBXNativeTarget "KsiazkaKontaktow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BDA09322A21A241004CB201 /* Debug */,
+				3BDA09332A21A241004CB201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3BDA09212A21A23D004CB201 /* KsiazkaKontaktow.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3BDA09222A21A23D004CB201 /* KsiazkaKontaktow.xcdatamodel */,
+			);
+			currentVersion = 3BDA09222A21A23D004CB201 /* KsiazkaKontaktow.xcdatamodel */;
+			path = KsiazkaKontaktow.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3BDA09122A21A23D004CB201 /* Project object */;
+}
