@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             progressInfo = intent.getParcelableExtra(DownloadService.PROGRESS_INFO_KEY);
             updateUIFromProgressInfo(progressInfo);
+            pobierzInfo();
         }
     };
 
